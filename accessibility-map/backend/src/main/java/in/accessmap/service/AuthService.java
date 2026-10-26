@@ -39,7 +39,8 @@ public class AuthService {
                 email,
                 passwordEncoder.encode(request.password()),
                 Instant.now()));
-        return new AuthResponse(jwtService.issue(user.getEmail()), user.getEmail(), jwtService.getExpirationSeconds());
+        return new AuthResponse(
+                jwtService.issue(user.getEmail()), user.getEmail(), jwtService.getExpirationSeconds(), user.isModerator());
     }
 
     @Transactional(readOnly = true)
@@ -50,7 +51,8 @@ public class AuthService {
         if (!passwordEncoder.matches(request.password(), user.getPasswordHash())) {
             throw invalidCredentials();
         }
-        return new AuthResponse(jwtService.issue(user.getEmail()), user.getEmail(), jwtService.getExpirationSeconds());
+        return new AuthResponse(
+                jwtService.issue(user.getEmail()), user.getEmail(), jwtService.getExpirationSeconds(), user.isModerator());
     }
 
     private static String normalizeEmail(String email) {

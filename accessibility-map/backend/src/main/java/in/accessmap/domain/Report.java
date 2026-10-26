@@ -3,6 +3,7 @@ package in.accessmap.domain;
 import java.time.Instant;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Column;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
@@ -35,6 +36,10 @@ public class Report {
     private Instant reportedAt;
     private int ttlDays;
 
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false, columnDefinition = "varchar(16) default 'APPROVED'")
+    private ReviewStatus reviewStatus;
+
     protected Report() {
     }
 
@@ -44,6 +49,7 @@ public class Report {
         this.note = note;
         this.reportedAt = reportedAt;
         this.ttlDays = ttlDays;
+        this.reviewStatus = ReviewStatus.APPROVED;
     }
 
     public Report(
@@ -59,6 +65,7 @@ public class Report {
         this.note = note;
         this.reportedAt = reportedAt;
         this.ttlDays = ttlDays;
+        this.reviewStatus = ReviewStatus.PENDING;
     }
 
     public Long getId() {
@@ -87,5 +94,13 @@ public class Report {
 
     public int getTtlDays() {
         return ttlDays;
+    }
+
+    public ReviewStatus getReviewStatus() {
+        return reviewStatus;
+    }
+
+    public void review(ReviewStatus reviewStatus) {
+        this.reviewStatus = reviewStatus;
     }
 }

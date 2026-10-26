@@ -15,6 +15,29 @@ export interface AuthResult {
   token: string
   email: string
   expiresInSeconds: number
+  moderator: boolean
+}
+
+export interface ModerationReport {
+  id: number
+  placeName: string
+  featureLabel: string
+  featureType: FeatureType
+  status: ReportStatus
+  note: string | null
+  reporterEmail: string | null
+  reportedAt: string
+}
+
+export interface ModerationAuditEntry {
+  reportId: number
+  placeName: string
+  featureLabel: string
+  featureType: FeatureType
+  reportStatus: ReportStatus
+  decision: 'APPROVED' | 'REJECTED'
+  moderatorEmail: string
+  reviewedAt: string
 }
 
 export async function authenticate(
@@ -83,5 +106,40 @@ export async function createFeatureReport(
 
   if (!response.ok) {
     throw new Error(await responseErrorMessage(response, `Could not add feature (${response.status}).`))
+  }
+}
+
+export async function getPendingReports(token: string): Promise<ModerationReport[]> {
+  const response = await fetch(`${API_BASE}/moderation/reports`, {
+    headers: { Authorization: `Bearer ${token}` },
+  })
+  if (!response.ok) {
+    throw new Error(await responseErrorMessage(response, `Could not load moderation queue (${response.status}).`))
+  }
+  return response.json() as Promise<ModerationReport[]>
+}
+
+export async function getModerationAudit(token: string): Promise<ModerationAuditEntry[]> {
+  const response = await fetch(`${API_BASE}/moderation/reports/audit`, {
+    headers: { Authorization: `Bearer ${token}` },
+  })
+  if (!response.ok) {
+    throw new Error(await responseErrorMessage(response, `Could not load moderation history (${response.status}).`))
+  }
+  return response.json() as Promise<ModerationAuditEntry[]>
+}
+
+export async function reviewReport(
+  reportId: number,
+  decision: 'APPROVE' | 'REJECT',
+  token: string,
+): Promise<void> {
+  const response = await fetch(`${API_BASE}/moderation/reports/${reportId}/decision`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+    body: JSON.stringify({ decision }),
+  })
+  if (!response.ok) {
+    throw new Error(await responseErrorMessage(response, `Could not review report (${response.status}).`))
   }
 }

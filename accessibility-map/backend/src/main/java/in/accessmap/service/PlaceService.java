@@ -19,6 +19,7 @@ import in.accessmap.domain.FeatureType;
 import in.accessmap.domain.Place;
 import in.accessmap.domain.Report;
 import in.accessmap.domain.ReportStatus;
+import in.accessmap.domain.ReviewStatus;
 import in.accessmap.domain.AppUser;
 import in.accessmap.dto.CreateFeatureRequest;
 import in.accessmap.dto.CreateReportRequest;
@@ -76,6 +77,7 @@ public class PlaceService {
         Map<Long, List<Report>> reportsByFeature = featureIds.isEmpty()
                 ? Map.of()
                 : reportRepository.findAllByFeatureIdInOrderByReportedAtDesc(featureIds).stream()
+                        .filter(report -> report.getReviewStatus() == ReviewStatus.APPROVED)
                         .collect(Collectors.groupingBy(report -> report.getFeature().getId()));
 
         return places.stream()
@@ -120,16 +122,30 @@ public class PlaceService {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Status is not valid for this feature type.");
         }
 
-        String label = request.label().trim();
-        if (featureRepository.existsByPlace_IdAndTypeAndLabelIgnoreCase(placeId, request.type(), label)) {
-            throw new ResponseStatusException(HttpStatus.CONFLICT, "This feature has already been reported for the place.");
-        }
-
         AppUser reporter = requireUser(reporterEmail);
         Instant now = Instant.now();
+        String label = request.label().trim();
+        Feature feature = featureRepository.findByPlace_IdAndTypeAndLabelIgnoreCase(placeId, request.type(), label)
+                .orElse(null);
+        if (feature != null) {
+            if (reportRepository.existsByFeature_IdAndReviewStatus(feature.getId(), ReviewStatus.APPROVED)) {
+                throw new ResponseStatusException(
+                        HttpStatus.CONFLICT, "This feature is already on the map; submit an update instead.");
+            }
+            if (reportRepository.existsByFeature_IdAndReviewStatus(feature.getId(), ReviewStatus.PENDING)) {
+                throw new ResponseStatusException(HttpStatus.CONFLICT, "This feature is already awaiting review.");
+            }
+            if (reportRepository.existsByFeature_IdAndUser_IdAndReportedAtGreaterThanEqual(
+                    feature.getId(), reporter.getId(), now.minus(DUPLICATE_REPORT_WINDOW_HOURS, ChronoUnit.HOURS))) {
+                throw new ResponseStatusException(
+                        HttpStatus.CONFLICT, "You have already reported this feature within the last 24 hours.");
+            }
+        }
         enforceReportRateLimit(reporter, now);
 
-        Feature feature = featureRepository.save(new Feature(place, request.type(), label));
+        if (feature == null) {
+            feature = featureRepository.save(new Feature(place, request.type(), label));
+        }
         reportRepository.save(new Report(
                 feature,
                 reporter,
@@ -159,6 +175,8 @@ public class PlaceService {
 
     private PlaceResponse toResponse(Place place, Map<Long, List<Report>> reportsByFeature) {
         List<FeatureResponse> features = place.getFeatures().stream()
+                .filter(feature -> reportsByFeature.getOrDefault(feature.getId(), List.of()).stream()
+                        .anyMatch(report -> report.getReviewStatus() == ReviewStatus.APPROVED))
                 .map(feature -> toFeatureResponse(feature, reportsByFeature.getOrDefault(feature.getId(), List.of())))
                 .toList();
         return new PlaceResponse(

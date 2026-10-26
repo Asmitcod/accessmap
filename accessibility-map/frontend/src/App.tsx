@@ -26,7 +26,16 @@ import {
   ZoomControl,
   useMap,
 } from 'react-leaflet'
-import { authenticate, createFeatureReport, createReport, getPlaces } from './api'
+import {
+  authenticate,
+  createFeatureReport,
+  createReport,
+  getModerationAudit,
+  getPendingReports,
+  getPlaces,
+  reviewReport,
+} from './api'
+import type { ModerationAuditEntry, ModerationReport } from './api'
 import { demoPlaces } from './demo-data'
 import type { FeatureSummary, FeatureType, Place, ReportStatus } from './types'
 
@@ -124,6 +133,14 @@ function App() {
   const [successMessage, setSuccessMessage] = useState('')
   const [authToken, setAuthToken] = useState('')
   const [authEmail, setAuthEmail] = useState('')
+  const [isModerator, setIsModerator] = useState(false)
+  const [isModerationOpen, setIsModerationOpen] = useState(false)
+  const [moderationReports, setModerationReports] = useState<ModerationReport[]>([])
+  const [moderationAudit, setModerationAudit] = useState<ModerationAuditEntry[]>([])
+  const [moderationView, setModerationView] = useState<'pending' | 'history'>('pending')
+  const [isLoadingModeration, setIsLoadingModeration] = useState(false)
+  const [moderatingReportId, setModeratingReportId] = useState<number | null>(null)
+  const [moderationError, setModerationError] = useState('')
   const [isAuthOpen, setIsAuthOpen] = useState(false)
   const [authMode, setAuthMode] = useState<'login' | 'register'>('login')
   const [authEmailInput, setAuthEmailInput] = useState('')
@@ -230,6 +247,7 @@ function App() {
       const result = await authenticate(authMode, authEmailInput, authPasswordInput)
       setAuthToken(result.token)
       setAuthEmail(result.email)
+      setIsModerator(result.moderator)
       setAuthPasswordInput('')
       setIsAuthOpen(false)
       setSuccessMessage(`Signed in as ${result.email}.`)
@@ -237,6 +255,54 @@ function App() {
       setAuthError(error instanceof Error ? error.message : 'Authentication failed.')
     } finally {
       setIsAuthenticating(false)
+    }
+  }
+
+  async function openModerationQueue() {
+    if (!authToken || !isModerator) return
+    setIsModerationOpen(true)
+    setModerationView('pending')
+    setIsLoadingModeration(true)
+    setModerationError('')
+    try {
+      setModerationReports(await getPendingReports(authToken))
+    } catch (error) {
+      setModerationError(error instanceof Error ? error.message : 'Could not load moderation queue.')
+    } finally {
+      setIsLoadingModeration(false)
+    }
+  }
+
+  async function openModerationHistory() {
+    if (!authToken || !isModerator) return
+    setModerationView('history')
+    setIsLoadingModeration(true)
+    setModerationError('')
+    try {
+      setModerationAudit(await getModerationAudit(authToken))
+    } catch (error) {
+      setModerationError(error instanceof Error ? error.message : 'Could not load moderation history.')
+    } finally {
+      setIsLoadingModeration(false)
+    }
+  }
+
+  async function decideReport(reportId: number, decision: 'APPROVE' | 'REJECT') {
+    if (!authToken) return
+    setModeratingReportId(reportId)
+    setModerationError('')
+    try {
+      await reviewReport(reportId, decision, authToken)
+      setModerationReports((reports) => reports.filter((report) => report.id !== reportId))
+      if (moderationView === 'history') {
+        setModerationAudit(await getModerationAudit(authToken))
+      }
+      setPlaces(await getPlaces(search))
+      setSuccessMessage(decision === 'APPROVE' ? 'Report approved and added to the map.' : 'Report rejected.')
+    } catch (error) {
+      setModerationError(error instanceof Error ? error.message : 'Could not review report.')
+    } finally {
+      setModeratingReportId(null)
     }
   }
 
@@ -259,7 +325,7 @@ function App() {
           note: reportNote.trim(),
         })
       }
-      setSuccessMessage('Thanks for helping keep this information current.')
+      setSuccessMessage('Thanks for helping keep this information current. It will appear on the map after moderator review.')
       setIsReportOpen(false)
       try {
         const updated = await getPlaces(search)
@@ -291,12 +357,19 @@ function App() {
           {authEmail ? (
             <>
               <span className="signed-in-email">{authEmail}</span>
+              {isModerator && (
+                <button className="text-button" type="button" onClick={() => void openModerationQueue()}>
+                  Moderation{moderationReports.length ? ` (${moderationReports.length})` : ''}
+                </button>
+              )}
               <button
                 className="text-button"
                 type="button"
                 onClick={() => {
                   setAuthToken('')
                   setAuthEmail('')
+                  setIsModerator(false)
+                  setIsModerationOpen(false)
                   setIsReportOpen(false)
                   setSuccessMessage('You have been signed out.')
                 }}
@@ -333,12 +406,22 @@ function App() {
             <a href="#map" onClick={() => setIsMobileMenuOpen(false)}>Explore map</a>
             <a href="#how-it-works" onClick={() => setIsMobileMenuOpen(false)}>How it works</a>
             {authEmail ? (
-              <button type="button" onClick={() => {
-                setAuthToken('')
-                setAuthEmail('')
-                setIsReportOpen(false)
-                setIsMobileMenuOpen(false)
-              }}>Sign out ({authEmail})</button>
+              <>
+                {isModerator && (
+                  <button type="button" onClick={() => {
+                    setIsMobileMenuOpen(false)
+                    void openModerationQueue()
+                  }}>Moderation queue</button>
+                )}
+                <button type="button" onClick={() => {
+                  setAuthToken('')
+                  setAuthEmail('')
+                  setIsModerator(false)
+                  setIsModerationOpen(false)
+                  setIsReportOpen(false)
+                  setIsMobileMenuOpen(false)
+                }}>Sign out ({authEmail})</button>
+              </>
             ) : (
               <>
                 <button type="button" onClick={() => {
@@ -599,6 +682,114 @@ function App() {
         <span>Community-reported information can change. Verify critical access needs with the venue.</span>
         <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">Place &amp; map data © OpenStreetMap contributors · ODbL</a>
       </footer>
+
+      {isModerationOpen && (
+        <div className="dialog-backdrop" role="presentation" onMouseDown={(event) => {
+          if (event.target === event.currentTarget) setIsModerationOpen(false)
+        }}>
+          <section className="report-dialog moderation-dialog" role="dialog" aria-modal="true" aria-labelledby="moderation-title">
+            <div className="dialog-header">
+              <div>
+                <span className="section-kicker">ACCESSMAP MODERATION</span>
+                <h2 id="moderation-title">Review community reports</h2>
+                <p>Approve reports you can verify; rejected reports stay off the public map.</p>
+              </div>
+              <button className="icon-button" type="button" aria-label="Close moderation queue" onClick={() => setIsModerationOpen(false)}><X size={19} /></button>
+            </div>
+            <div className="moderation-tabs" role="tablist" aria-label="Moderation views">
+              <button
+                className={moderationView === 'pending' ? 'selected' : ''}
+                id="moderation-pending-tab"
+                type="button"
+                role="tab"
+                aria-selected={moderationView === 'pending'}
+                aria-controls="moderation-view"
+                onClick={() => void openModerationQueue()}
+              >
+                Pending{moderationReports.length ? ` (${moderationReports.length})` : ''}
+              </button>
+              <button
+                className={moderationView === 'history' ? 'selected' : ''}
+                id="moderation-history-tab"
+                type="button"
+                role="tab"
+                aria-selected={moderationView === 'history'}
+                aria-controls="moderation-view"
+                onClick={() => void openModerationHistory()}
+              >
+                Decision history
+              </button>
+            </div>
+            {moderationError && <p className="moderation-error" role="alert">{moderationError}</p>}
+            <div id="moderation-view" role="tabpanel" aria-labelledby={moderationView === 'pending' ? 'moderation-pending-tab' : 'moderation-history-tab'}>
+              {isLoadingModeration ? (
+                <p className="moderation-empty" role="status">
+                  {moderationView === 'pending' ? 'Loading pending reports…' : 'Loading decision history…'}
+                </p>
+              ) : moderationView === 'pending' ? (
+                moderationReports.length === 0 ? (
+                  <p className="moderation-empty">No reports are waiting for review.</p>
+                ) : (
+                  <div className="moderation-list">
+                    {moderationReports.map((report) => (
+                      <article className="moderation-item" key={report.id}>
+                        <div className="moderation-item-heading">
+                          <strong>{report.featureLabel}</strong>
+                          <span>{featureLabels[report.featureType]} · {statusLabels[report.status]}</span>
+                        </div>
+                        <p className="moderation-place">{report.placeName}</p>
+                        {report.note && <p className="moderation-note">{report.note}</p>}
+                        <p className="moderation-meta">
+                          {report.reporterEmail ?? 'Legacy report'} · {new Date(report.reportedAt).toLocaleString()}
+                        </p>
+                        <div className="moderation-actions">
+                          <button
+                            className="moderation-reject"
+                            type="button"
+                            disabled={moderatingReportId !== null}
+                            onClick={() => void decideReport(report.id, 'REJECT')}
+                          >
+                            {moderatingReportId === report.id ? 'Saving…' : 'Reject'}
+                          </button>
+                          <button
+                            className="moderation-approve"
+                            type="button"
+                            disabled={moderatingReportId !== null}
+                            onClick={() => void decideReport(report.id, 'APPROVE')}
+                          >
+                            {moderatingReportId === report.id ? 'Saving…' : 'Approve'}
+                          </button>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                )
+              ) : moderationAudit.length === 0 ? (
+                <p className="moderation-empty">No moderation decisions have been recorded.</p>
+              ) : (
+                <div className="moderation-list">
+                  {moderationAudit.map((entry) => (
+                    <article className="moderation-item" key={entry.reportId}>
+                      <div className="moderation-item-heading">
+                        <strong>{entry.featureLabel}</strong>
+                        <span className={entry.decision === 'APPROVED' ? 'audit-approved' : 'audit-rejected'}>
+                          {entry.decision === 'APPROVED' ? 'Approved' : 'Rejected'}
+                        </span>
+                      </div>
+                      <p className="moderation-place">
+                        {entry.placeName} · {featureLabels[entry.featureType]} · {statusLabels[entry.reportStatus]}
+                      </p>
+                      <p className="moderation-meta">
+                        By {entry.moderatorEmail} · {new Date(entry.reviewedAt).toLocaleString()}
+                      </p>
+                    </article>
+                  ))}
+                </div>
+              )}
+            </div>
+          </section>
+        </div>
+      )}
 
       {isReportOpen && selectedPlace && (
         <div className="dialog-backdrop" role="presentation" onMouseDown={(event) => {

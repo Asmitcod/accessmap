@@ -6,7 +6,7 @@ An accessibility-first map for community reports on entrances, lifts, ramps, and
 
 The API imports `backend/src/main/resources/osm/delhi-places.geojson` on its first start when the database is empty. It contains 245 named OpenStreetMap places in the Connaught Place pilot area. Imported places start with no accessibility features; community members can report features and their status. OSM place tags are not treated as verified accessibility reports. Place data is from OpenStreetMap contributors, © OpenStreetMap contributors, available under the Open Database License (ODbL). The map also displays OpenStreetMap tiles and links to attribution.
 
-If the GeoJSON resource is absent, the API loads fictional demo places instead. Demo locations and reports are labelled and must not be used for travel planning. Reports submitted to the local prototype only update the local database; email verification, moderation, trust scoring, photo uploads, and notifications are not part of this milestone.
+If the GeoJSON resource is absent, the API loads fictional demo places instead. Demo locations and reports are labelled and must not be used for travel planning. Reports submitted to the local prototype only update the local database; email verification, trust scoring, photo uploads, and notifications are not part of this milestone.
 
 ## Technology
 
@@ -51,23 +51,42 @@ Install Java 21, Maven, and Node.js 20.19+ (or 22.12+).
 
 If the API is unavailable, the frontend displays a sample-only preview and disables report submission. Sample preview data is never sent as a real report.
 
+## Local moderation
+
+New community reports are pending until approved by a moderator, and pending or rejected reports do not appear on the public map. Existing reports are treated as approved during the schema upgrade.
+
+To configure the local moderator account, set its email and enter a password of at least 16 characters (at most 72 UTF-8 bytes) in the same PowerShell window before starting the API:
+
+```powershell
+$env:ACCESSMAP_MODERATOR_EMAIL = Read-Host "Moderator email"
+$moderatorPassword = Read-Host "Moderator password" -AsSecureString
+$env:ACCESSMAP_MODERATOR_PASSWORD = ([System.Net.NetworkCredential]::new("", $moderatorPassword)).Password
+mvn spring-boot:run
+```
+
+The API creates that account on first start. If the email already belongs to an account, its existing password must match the configured password before it is granted moderator access. If both settings are omitted, report submission still works, but reports remain pending and no account can review them. These local environment variables are not saved after the PowerShell window closes.
+
 ## API
 
 - `GET /api/places?search=<text>` — list places and their latest non-expired feature reports.
 - `POST /api/places/{placeId}/features` — add a reported feature and its first status, for example `{ "type": "LIFT", "label": "Main building lift", "status": "WORKING", "note": "Optional detail" }`.
 - `POST /api/places/{placeId}/features/{featureId}/reports` — submit a new status for an existing feature, for example `{ "status": "OUT_OF_SERVICE", "note": "Optional detail" }`.
+- `GET /api/moderation/reports` — list pending reports (moderator role required).
+- `POST /api/moderation/reports/{reportId}/decision` — approve or reject a report (moderator role required).
 - `GET /actuator/health` — API health.
 
 Reports currently use a 14-day TTL for lifts/restrooms and a 90-day TTL for entrances/ramps. Expired reports are excluded from the current status; history remains in the database.
 
 Report submissions require a signed-in account. An account can submit up to 10 reports per rolling hour and 50 per rolling day, and can report the same feature only once per 24 hours. Duplicate reports return HTTP 409; exceeded limits return HTTP 429.
 
+New reports stay pending until moderator approval. Moderators can review them from the **Moderation** button after signing in with the configured moderator account. Approval makes the report visible; rejection keeps it off the map. Only configured moderators can read reporter emails in the review queue.
+
 ## Accounts and report access
 
 The API supports email/password registration and login. Passwords are stored as BCrypt hashes; successful auth returns a short-lived (30 minute by default) JWT. Report creation requires `Authorization: Bearer <token>`. The local development JWT secret is a public placeholder and must never be used in a deployment. For the `production` profile, set `ACCESSMAP_JWT_SECRET` to a randomly generated Base64-encoded key of at least 32 bytes.
 
-The frontend keeps the access token in memory only; it is cleared on refresh/sign-out. Report submissions are limited per account to 10 per rolling hour and 50 per rolling day; the same account cannot report the same feature again within 24 hours. These are basic account-level prototype safeguards, not distributed or IP-based abuse protection. Email verification, password reset, refresh tokens, account deletion/export, and moderator/account controls are not implemented yet. Do not expose public account creation or reporting to the internet until stronger abuse controls, HTTPS, moderation, audit logging, privacy controls, and WCAG 2.2 AA verification are in place. The free-tier provider quotas and OpenStreetMap tile policy must also be checked before launch.
+The frontend keeps the access token in memory only; it is cleared on refresh/sign-out. Report submissions are limited per account to 10 per rolling hour and 50 per rolling day; the same account cannot report the same feature again within 24 hours. These are basic account-level prototype safeguards, not distributed or IP-based abuse protection. Email verification, password reset, refresh tokens, account deletion/export, moderator audit logging, and account controls are not implemented yet. Do not expose public account creation or reporting to the internet until stronger abuse controls, HTTPS, moderation procedures, audit logging, privacy controls, and WCAG 2.2 AA verification are in place. The free-tier provider quotas and OpenStreetMap tile policy must also be checked before launch.
 
 ## Before production
 
-Email verification, password recovery, stronger distributed and IP-based abuse controls, account deletion/export, moderation, audit logging, trust/confidence scoring, privacy controls, and WCAG 2.2 AA verification are still required before a public launch. Check free-tier provider quotas and the OpenStreetMap tile policy before launch.
+Email verification, password recovery, stronger distributed and IP-based abuse controls, account deletion/export, audit logging, trust/confidence scoring, privacy controls, and WCAG 2.2 AA verification are still required before a public launch. Moderation is a basic configured-account queue and still needs operational procedures and an audit log. Check free-tier provider quotas and the OpenStreetMap tile policy before launch.

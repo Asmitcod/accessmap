@@ -29,3 +29,6 @@ app:
   security:
     jwt-secret: ${ACCESSMAP_JWT_SECRET:YWNjZXNzbWFwLWxvY2FsLWRldi1zZWNyZXQtY2hhbmdlLW1lLTIwMjY=}
     jwt-expiration-ms: ${ACCESSMAP_JWT_EXPIRATION_MS:1800000}
+  moderation:
+    email: ${ACCESSMAP_MODERATOR_EMAIL:}
+    password: ${ACCESSMAP_MODERATOR_PASSWORD:}

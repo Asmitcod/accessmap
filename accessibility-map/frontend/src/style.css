@@ -149,6 +149,26 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .form-hint { display: flex; align-items: center; gap: 7px; margin: 12px 0 17px; color: #848f88; font-size: 10px; }
 .submit-report { display: flex; width: 100%; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 7px; padding: 12px; color: #fff; background: var(--green); font-size: 12px; font-weight: 700; cursor: pointer; }
 .submit-report:disabled { cursor: not-allowed; opacity: .6; }
+.moderation-dialog { width: min(100%, 660px); }
+.moderation-list { display: flex; max-height: min(62dvh, 560px); flex-direction: column; gap: 10px; overflow-y: auto; padding-right: 3px; }
+.moderation-tabs { display: flex; gap: 5px; border-bottom: 1px solid #e8ece6; margin: -5px 0 12px; }
+.moderation-tabs button { border: 0; border-bottom: 2px solid transparent; padding: 9px 11px; color: #75827b; background: transparent; font-size: 11px; font-weight: 600; cursor: pointer; }
+.moderation-tabs button.selected { border-bottom-color: var(--green); color: var(--deep-green); }
+.moderation-item { border: 1px solid #e5eae4; border-radius: 9px; padding: 13px; background: #fcfdfb; }
+.moderation-item-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 5px 12px; color: #36483f; font-size: 12px; }
+.moderation-item-heading span, .moderation-meta { color: #78857e; font-size: 10px; }
+.moderation-place { margin: 6px 0; color: #4e6258; font-size: 11px; font-weight: 700; }
+.moderation-note { margin: 8px 0; color: #52625a; font-size: 11px; line-height: 1.55; overflow-wrap: anywhere; }
+.moderation-meta { margin: 8px 0 0; overflow-wrap: anywhere; }
+.moderation-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 11px; }
+.moderation-actions button { border: 1px solid #dfe6df; border-radius: 6px; padding: 7px 11px; background: #fff; font-size: 10px; font-weight: 700; cursor: pointer; }
+.moderation-actions button:disabled { cursor: not-allowed; opacity: .55; }
+.moderation-actions .moderation-approve { border-color: var(--green); color: #fff; background: var(--green); }
+.moderation-actions .moderation-reject { color: #954b42; }
+.audit-approved { color: #286b54 !important; font-weight: 700; }
+.audit-rejected { color: #a14b40 !important; font-weight: 700; }
+.moderation-empty { padding: 12px 0; color: #718078; font-size: 12px; }
+.moderation-error { margin: 0 0 12px; color: #a13f34; font-size: 11px; line-height: 1.5; }
 .leaflet-control-attribution { font-size: 8px !important; }
 
 @media (max-width: 980px) {

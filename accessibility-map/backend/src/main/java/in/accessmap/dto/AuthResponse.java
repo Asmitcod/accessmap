@@ -1,4 +1,4 @@
 package in.accessmap.dto;
 
-public record AuthResponse(String token, String email, long expiresInSeconds) {
+public record AuthResponse(String token, String email, long expiresInSeconds, boolean moderator) {
 }

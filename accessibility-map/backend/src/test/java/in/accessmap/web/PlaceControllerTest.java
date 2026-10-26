@@ -27,10 +27,13 @@ import in.accessmap.domain.Feature;
 import in.accessmap.domain.FeatureType;
 import in.accessmap.domain.Report;
 import in.accessmap.domain.ReportStatus;
+import in.accessmap.domain.ReviewDecision;
+import in.accessmap.domain.ReviewStatus;
 import in.accessmap.repository.AppUserRepository;
 import in.accessmap.repository.FeatureRepository;
 import in.accessmap.repository.PlaceRepository;
 import in.accessmap.repository.ReportRepository;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootTest(properties = "spring.datasource.url=jdbc:h2:mem:accessmap-test;DB_CLOSE_DELAY=-1;MODE=PostgreSQL")
 @AutoConfigureMockMvc
@@ -51,6 +54,9 @@ class PlaceControllerTest {
 
     @Autowired
     private ReportRepository reportRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Test
     void listsImportedPlacesWithoutInventingAccessibilityFeatures() throws Exception {
@@ -84,28 +90,136 @@ class PlaceControllerTest {
                         .header("Authorization", "Bearer " + registerAndGetToken())
                         .contentType("application/json")
                         .content("""
-                                {"type":"LIFT","label":"Main building lift","status":"WORKING","note":"Lift is operating."}
+                                {"type":"LIFT","label":"Main building lift","status":"WORKING","note":"Initial lift observation."}
                                 """))
                 .andExpect(status().isCreated());
+
+        String featureId = featureRepository.findAll().stream()
+                .filter(feature -> feature.getLabel().equals("Main building lift"))
+                .map(feature -> feature.getId().toString())
+                .findFirst()
+                .orElseThrow();
+        String moderatorToken = createModeratorAndGetToken();
+        long initialReportId = reportIdWithNote("Initial lift observation.");
+        mockMvc.perform(post("/api/moderation/reports/{reportId}/decision", initialReportId)
+                        .header("Authorization", "Bearer " + moderatorToken)
+                        .contentType("application/json")
+                        .content("""
+                                {"decision":"APPROVE"}
+                                """))
+                .andExpect(status().isNoContent());
 
         MvcResult afterCreate = mockMvc.perform(get("/api/places").param("search", placeName))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].features[0].confirmationCount", is(1)))
                 .andReturn();
-        String featureId = JsonPath.read(afterCreate.getResponse().getContentAsString(), "$[0].features[0].id");
+        featureId = JsonPath.read(afterCreate.getResponse().getContentAsString(), "$[0].features[0].id");
 
         mockMvc.perform(post("/api/places/{placeId}/features/{featureId}/reports", placeId, featureId)
                         .header("Authorization", "Bearer " + registerAndGetToken())
                         .contentType("application/json")
                         .content("""
-                                {"status":"OUT_OF_SERVICE","note":"Lift is temporarily out of service."}
+                                {"status":"OUT_OF_SERVICE","note":"Second lift observation."}
                                 """))
                 .andExpect(status().isCreated());
+
+        mockMvc.perform(post("/api/moderation/reports/{reportId}/decision", reportIdWithNote("Second lift observation."))
+                        .header("Authorization", "Bearer " + moderatorToken)
+                        .contentType("application/json")
+                        .content("""
+                                {"decision":"APPROVE"}
+                                """))
+                .andExpect(status().isNoContent());
 
         mockMvc.perform(get("/api/places").param("search", placeName))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].features[0].status", is("OUT_OF_SERVICE")))
                 .andExpect(jsonPath("$[0].features[0].confirmationCount", is(2)));
+    }
+
+    @Test
+    void keepsReportsHiddenUntilApprovalAndAllowsModeratorsToRejectThem() throws Exception {
+        MvcResult places = mockMvc.perform(get("/api/places"))
+                .andExpect(status().isOk())
+                .andReturn();
+        String placeId = JsonPath.read(places.getResponse().getContentAsString(), "$[0].id").toString();
+        String reporterToken = registerAndGetToken();
+
+        mockMvc.perform(get("/api/moderation/reports")
+                        .header("Authorization", "Bearer " + reporterToken))
+                .andExpect(status().isForbidden());
+        mockMvc.perform(get("/api/moderation/reports/audit")
+                        .header("Authorization", "Bearer " + reporterToken))
+                .andExpect(status().isForbidden());
+
+        mockMvc.perform(post("/api/places/{placeId}/features", placeId)
+                        .header("Authorization", "Bearer " + reporterToken)
+                        .contentType("application/json")
+                        .content("""
+                                {"type":"RAMP","label":"Moderation approved ramp","status":"GENTLE","note":"Approval test."}
+                                """))
+                .andExpect(status().isCreated());
+
+        long reportId = reportIdWithNote("Approval test.");
+        mockMvc.perform(get("/api/moderation/reports")
+                        .header("Authorization", "Bearer " + reporterToken))
+                .andExpect(status().isForbidden());
+
+        String moderatorToken = createModeratorAndGetToken();
+        mockMvc.perform(get("/api/moderation/reports")
+                        .header("Authorization", "Bearer " + moderatorToken))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[?(@.id == " + reportId + ")]", hasSize(1)));
+
+        mockMvc.perform(post("/api/moderation/reports/{reportId}/decision", reportId)
+                        .header("Authorization", "Bearer " + moderatorToken)
+                        .contentType("application/json")
+                        .content("""
+                                {"decision":"APPROVE"}
+                                """))
+                .andExpect(status().isNoContent());
+
+        mockMvc.perform(get("/api/moderation/reports/audit")
+                        .header("Authorization", "Bearer " + moderatorToken))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[?(@.reportId == " + reportId + " && @.decision == 'APPROVED')]", hasSize(1)));
+
+        mockMvc.perform(get("/api/places"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[*].features[?(@.label == 'Moderation approved ramp')]", hasSize(1)));
+
+        mockMvc.perform(post("/api/places/{placeId}/features", placeId)
+                        .header("Authorization", "Bearer " + reporterToken)
+                        .contentType("application/json")
+                        .content("""
+                                {"type":"RESTROOM","label":"Moderation rejected restroom","status":"USABLE","note":"Rejection test."}
+                                """))
+                .andExpect(status().isCreated());
+
+        mockMvc.perform(post("/api/moderation/reports/{reportId}/decision", reportIdWithNote("Rejection test."))
+                        .header("Authorization", "Bearer " + moderatorToken)
+                        .contentType("application/json")
+                        .content("""
+                                {"decision":"REJECT"}
+                                """))
+                .andExpect(status().isNoContent());
+
+        mockMvc.perform(get("/api/moderation/reports/audit")
+                        .header("Authorization", "Bearer " + moderatorToken))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[?(@.decision == 'REJECTED')]", hasSize(greaterThan(0))));
+
+        mockMvc.perform(get("/api/places"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[*].features[?(@.label == 'Moderation rejected restroom')]", hasSize(0)));
+
+        mockMvc.perform(post("/api/places/{placeId}/features", placeId)
+                        .header("Authorization", "Bearer " + registerAndGetToken())
+                        .contentType("application/json")
+                        .content("""
+                                {"type":"RESTROOM","label":"Moderation rejected restroom","status":"USABLE","note":"Resubmission after rejection."}
+                                """))
+                .andExpect(status().isCreated());
     }
 
     @Test
@@ -297,5 +411,32 @@ class PlaceControllerTest {
                 .andExpect(status().isCreated())
                 .andReturn();
         return JsonPath.read(result.getResponse().getContentAsString(), "$.token");
+    }
+
+    private String createModeratorAndGetToken() throws Exception {
+        String email = "moderator-" + UUID.randomUUID() + "@example.com";
+        userRepository.save(new AppUser(
+                email,
+                passwordEncoder.encode(TEST_PASSWORD),
+                Instant.now(),
+                true));
+        MvcResult result = mockMvc.perform(post("/api/auth/login")
+                        .contentType("application/json")
+                        .content("""
+                                {"email":"%s","password":"%s"}
+                                """.formatted(email, TEST_PASSWORD)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.moderator", is(true)))
+                .andReturn();
+        return JsonPath.read(result.getResponse().getContentAsString(), "$.token");
+    }
+
+    private long reportIdWithNote(String note) {
+        return reportRepository.findAll().stream()
+                .filter(report -> note.equals(report.getNote()))
+                .filter(report -> report.getReviewStatus() == ReviewStatus.PENDING)
+                .map(Report::getId)
+                .findFirst()
+                .orElseThrow();
     }
 }

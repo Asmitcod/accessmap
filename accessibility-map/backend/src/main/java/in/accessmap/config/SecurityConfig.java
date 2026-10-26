@@ -36,6 +36,8 @@ public class SecurityConfig {
                         .permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/places/**", "/actuator/health")
                         .permitAll()
+                        .requestMatchers("/api/moderation/**")
+                        .hasRole("MODERATOR")
                         .requestMatchers(
                                 HttpMethod.POST,
                                 "/api/places/*/features",

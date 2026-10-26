@@ -25,13 +25,21 @@ public class AppUser {
     @Column(nullable = false)
     private Instant createdAt;
 
+    @Column(name = "is_moderator", nullable = false, columnDefinition = "boolean default false")
+    private boolean moderator;
+
     protected AppUser() {
     }
 
     public AppUser(String email, String passwordHash, Instant createdAt) {
+        this(email, passwordHash, createdAt, false);
+    }
+
+    public AppUser(String email, String passwordHash, Instant createdAt, boolean moderator) {
         this.email = email;
         this.passwordHash = passwordHash;
         this.createdAt = createdAt;
+        this.moderator = moderator;
     }
 
     public Long getId() {
@@ -48,5 +56,13 @@ public class AppUser {
 
     public Instant getCreatedAt() {
         return createdAt;
+    }
+
+    public boolean isModerator() {
+        return moderator;
+    }
+
+    public void promoteToModerator() {
+        moderator = true;
     }
 }
