@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: accessmap-api
+    runtime: docker
+    plan: free
+    rootDir: accessibility-map/backend
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: production
+      - key: ACCESSMAP_PUBLIC_CONTRIBUTIONS_ENABLED
+        value: "false"
+      - key: ACCESSMAP_CORS_ORIGINS
+        value: https://accessmap-demo.onrender.com
+      - key: DATABASE_URL
+        sync: false
+      - key: DATABASE_USERNAME
+        sync: false
+      - key: DATABASE_PASSWORD
+        sync: false
+      - key: ACCESSMAP_JWT_SECRET
+        sync: false
+
+  - type: web
+    name: accessmap-demo
+    runtime: static
+    plan: free
+    rootDir: accessibility-map/frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_API_BASE
+        value: https://accessmap-api.onrender.com/api
+      - key: VITE_PUBLIC_CONTRIBUTIONS_ENABLED
+        value: "false"

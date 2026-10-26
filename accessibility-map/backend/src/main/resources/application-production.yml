@@ -13,3 +13,4 @@ spring:
 app:
   security:
     jwt-secret: ${ACCESSMAP_JWT_SECRET}
+  public-contributions-enabled: ${ACCESSMAP_PUBLIC_CONTRIBUTIONS_ENABLED:false}

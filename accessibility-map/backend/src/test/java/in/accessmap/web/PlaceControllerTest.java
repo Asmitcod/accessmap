@@ -184,6 +184,14 @@ class PlaceControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[?(@.reportId == " + reportId + " && @.decision == 'APPROVED')]", hasSize(1)));
 
+        mockMvc.perform(post("/api/moderation/reports/{reportId}/decision", reportId)
+                        .header("Authorization", "Bearer " + moderatorToken)
+                        .contentType("application/json")
+                        .content("""
+                                {"decision":"REJECT"}
+                                """))
+                .andExpect(status().isConflict());
+
         mockMvc.perform(get("/api/places"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[*].features[?(@.label == 'Moderation approved ramp')]", hasSize(1)));

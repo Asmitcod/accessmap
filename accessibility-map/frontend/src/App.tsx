@@ -33,6 +33,7 @@ import {
   getModerationAudit,
   getPendingReports,
   getPlaces,
+  publicContributionsEnabled,
   reviewReport,
 } from './api'
 import type { ModerationAuditEntry, ModerationReport } from './api'
@@ -202,6 +203,7 @@ function App() {
   }, [selectedId, selectedPlace])
 
   function openReport(feature: FeatureSummary) {
+    if (!publicContributionsEnabled) return
     if (!authToken) {
       setAuthMode('login')
       setAuthError('')
@@ -218,6 +220,7 @@ function App() {
   }
 
   function openNewFeatureReport() {
+    if (!publicContributionsEnabled) return
     if (!authToken) {
       setAuthMode('login')
       setAuthError('')
@@ -308,7 +311,7 @@ function App() {
 
   async function submitReport(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    if (!selectedPlace || !isReportOpen || !authToken) return
+    if (!publicContributionsEnabled || !selectedPlace || !isReportOpen || !authToken) return
 
     setIsSubmitting(true)
     try {
@@ -354,7 +357,7 @@ function App() {
           <a className="nav-link" href="#how-it-works">How it works</a>
         </nav>
         <div className="topbar-actions">
-          {authEmail ? (
+          {publicContributionsEnabled && authEmail ? (
             <>
               <span className="signed-in-email">{authEmail}</span>
               {isModerator && (
@@ -377,7 +380,7 @@ function App() {
                 Sign out
               </button>
             </>
-          ) : (
+          ) : publicContributionsEnabled ? (
             <>
               <button className="text-button" type="button" onClick={() => {
                 setAuthMode('login')
@@ -390,7 +393,7 @@ function App() {
                 setIsAuthOpen(true)
               }}>Join the community <ArrowUpRight size={15} /></button>
             </>
-          )}
+          ) : null}
           <button
             className="mobile-menu"
             type="button"
@@ -405,7 +408,7 @@ function App() {
           <nav className="mobile-nav" aria-label="Mobile navigation">
             <a href="#map" onClick={() => setIsMobileMenuOpen(false)}>Explore map</a>
             <a href="#how-it-works" onClick={() => setIsMobileMenuOpen(false)}>How it works</a>
-            {authEmail ? (
+            {publicContributionsEnabled && authEmail ? (
               <>
                 {isModerator && (
                   <button type="button" onClick={() => {
@@ -422,7 +425,7 @@ function App() {
                   setIsMobileMenuOpen(false)
                 }}>Sign out ({authEmail})</button>
               </>
-            ) : (
+            ) : publicContributionsEnabled ? (
               <>
                 <button type="button" onClick={() => {
                   setAuthMode('login')
@@ -437,7 +440,7 @@ function App() {
                   setIsMobileMenuOpen(false)
                 }}>Join the community</button>
               </>
-            )}
+            ) : null}
           </nav>
         )}
       </header>
@@ -609,7 +612,8 @@ function App() {
                       <button
                         className="reconfirm-button"
                         type="button"
-                        disabled={isOfflinePreview}
+                        disabled={isOfflinePreview || !publicContributionsEnabled}
+                        title={publicContributionsEnabled ? undefined : 'Reporting is disabled in this public demo.'}
                         onClick={() => openReport(feature)}
                         aria-label={`Update ${feature.label}`}
                       >
@@ -625,7 +629,8 @@ function App() {
               <button
                 className="add-place-button"
                 type="button"
-                disabled={isOfflinePreview}
+                disabled={isOfflinePreview || !publicContributionsEnabled}
+                title={publicContributionsEnabled ? undefined : 'Reporting is disabled in this public demo.'}
                 onClick={openNewFeatureReport}
               >
                 <Plus size={16} /> Report an accessibility feature
@@ -679,7 +684,11 @@ function App() {
       </div>
 
       <footer className="page-footer" id="how-it-works">
-        <span>Community-reported information can change. Verify critical access needs with the venue.</span>
+        <span>
+          {publicContributionsEnabled
+            ? 'Community-reported information can change. Verify critical access needs with the venue.'
+            : 'Public demo: contributions are disabled. Verify critical access needs with the venue.'}
+        </span>
         <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">Place &amp; map data © OpenStreetMap contributors · ODbL</a>
       </footer>
 

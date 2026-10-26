@@ -51,6 +51,33 @@ Install Java 21, Maven, and Node.js 20.19+ (or 22.12+).
 
 If the API is unavailable, the frontend displays a sample-only preview and disables report submission. Sample preview data is never sent as a real report.
 
+## Deploy a shareable demo (Render + Neon)
+
+The checked-in `render.yaml` creates a public static frontend and a Docker-based Spring Boot API. The API uses Neon PostgreSQL with Flyway migrations. Public browsing is enabled, but registration, report submission, and moderation endpoints are disabled on this demo deployment. The frontend hides contribution controls as well; the backend independently enforces the same restriction.
+
+1. Push this repository to your GitHub account. Create a free PostgreSQL project in Neon and note its host, database name, username, and password. Keep the database credentials private.
+2. In Render, create a **Blueprint** from your GitHub repository and apply the services defined in `render.yaml`. The names `accessmap-api` and `accessmap-demo` determine the URLs used by the configuration; if you rename either service, update the API URL in `render.yaml` and the frontend origin in the API environment variables.
+3. When Render requests unsynced API environment variables, enter:
+   - `DATABASE_URL`: `jdbc:postgresql://YOUR_NEON_HOST/YOUR_DATABASE?sslmode=require`
+   - `DATABASE_USERNAME`: the Neon database username
+   - `DATABASE_PASSWORD`: the Neon database password
+   - `ACCESSMAP_JWT_SECRET`: generate a private Base64 key locally with PowerShell:
+
+     ```powershell
+     $random = [System.Security.Cryptography.RandomNumberGenerator]::Create()
+     $bytes = New-Object byte[] 32
+     $random.GetBytes($bytes)
+     [Convert]::ToBase64String($bytes)
+     ```
+
+     Paste the output directly into Render's secret field. Do not commit it or send it in chat.
+
+   The blueprint sets the production profile, CORS origin, health check, and demo-only contribution setting. Do not enable contributions on a public deployment until email verification and stronger abuse safeguards are ready.
+4. Wait for both Render services to finish deploying. Open `https://accessmap-api.onrender.com/actuator/health` and confirm it reports `UP`, then visit `https://accessmap-demo.onrender.com`. The API imports the bundled 245-place dataset into Neon on first start.
+5. Verify the site displays OSM attribution and that sign-in/report controls are absent. Check that `POST /api/auth/register` is rejected by the API (HTTP 401) and that public place browsing still works.
+
+Render's free API instance may sleep while idle, so the first request after a quiet period can be slow; reload the demo once the service wakes. Check current Render and Neon free-tier quotas and retention limits before relying on the deployment. OpenStreetMap's public tile servers have a usage policy and are not a guaranteed production tile service. This deployment is a shareable prototype, not a production community launch.
+
 ## Local moderation
 
 New community reports are pending until approved by a moderator, and pending or rejected reports do not appear on the public map. Existing reports are treated as approved during the schema upgrade.
@@ -73,6 +100,7 @@ The API creates that account on first start. If the email already belongs to an 
 - `POST /api/places/{placeId}/features/{featureId}/reports` — submit a new status for an existing feature, for example `{ "status": "OUT_OF_SERVICE", "note": "Optional detail" }`.
 - `GET /api/moderation/reports` — list pending reports (moderator role required).
 - `POST /api/moderation/reports/{reportId}/decision` — approve or reject a report (moderator role required).
+- `GET /api/moderation/reports/audit` — latest 100 moderation decisions (moderator role required).
 - `GET /actuator/health` — API health.
 
 Reports currently use a 14-day TTL for lifts/restrooms and a 90-day TTL for entrances/ramps. Expired reports are excluded from the current status; history remains in the database.
@@ -80,6 +108,8 @@ Reports currently use a 14-day TTL for lifts/restrooms and a 90-day TTL for entr
 Report submissions require a signed-in account. An account can submit up to 10 reports per rolling hour and 50 per rolling day, and can report the same feature only once per 24 hours. Duplicate reports return HTTP 409; exceeded limits return HTTP 429.
 
 New reports stay pending until moderator approval. Moderators can review them from the **Moderation** button after signing in with the configured moderator account. Approval makes the report visible; rejection keeps it off the map. Only configured moderators can read reporter emails in the review queue.
+
+Moderation decisions are recorded with the report, moderator account, decision, and timestamp. Moderators can view the latest 100 decisions in the queue's **Decision history** tab. The audit endpoint and records are restricted to moderators and are not editable through the API.
 
 ## Accounts and report access
 
@@ -89,4 +119,4 @@ The frontend keeps the access token in memory only; it is cleared on refresh/sig
 
 ## Before production
 
-Email verification, password recovery, stronger distributed and IP-based abuse controls, account deletion/export, audit logging, trust/confidence scoring, privacy controls, and WCAG 2.2 AA verification are still required before a public launch. Moderation is a basic configured-account queue and still needs operational procedures and an audit log. Check free-tier provider quotas and the OpenStreetMap tile policy before launch.
+Email verification, password recovery, stronger distributed and IP-based abuse controls, account deletion/export, audit-log retention/monitoring and operational procedures, trust/confidence scoring, privacy controls, and WCAG 2.2 AA verification are still required before a public launch. Moderation is a basic configured-account queue. Check free-tier provider quotas and the OpenStreetMap tile policy before launch.

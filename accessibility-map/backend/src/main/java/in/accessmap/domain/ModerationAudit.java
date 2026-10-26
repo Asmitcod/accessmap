@@ -4,6 +4,8 @@ import java.time.Instant;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,8 +29,9 @@ public class ModerationAudit {
     @JoinColumn(name = "moderator_user_id", nullable = false)
     private AppUser moderator;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 16)
-    private String decision;
+    private ReviewStatus decision;
 
     @Column(nullable = false)
     private Instant reviewedAt;
@@ -36,7 +39,7 @@ public class ModerationAudit {
     protected ModerationAudit() {
     }
 
-    public ModerationAudit(Report report, AppUser moderator, String decision, Instant reviewedAt) {
+    public ModerationAudit(Report report, AppUser moderator, ReviewStatus decision, Instant reviewedAt) {
         this.report = report;
         this.moderator = moderator;
         this.decision = decision;
@@ -55,7 +58,7 @@ public class ModerationAudit {
         return moderator;
     }
 
-    public String getDecision() {
+    public ReviewStatus getDecision() {
         return decision;
     }
 

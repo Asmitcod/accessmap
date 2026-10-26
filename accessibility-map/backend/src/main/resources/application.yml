@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 spring:
   datasource:
@@ -32,3 +32,4 @@ app:
   moderation:
     email: ${ACCESSMAP_MODERATOR_EMAIL:}
     password: ${ACCESSMAP_MODERATOR_PASSWORD:}
+  public-contributions-enabled: ${ACCESSMAP_PUBLIC_CONTRIBUTIONS_ENABLED:true}

@@ -50,7 +50,7 @@ public class ModerationService {
 
     @Transactional
     public void reviewReport(Long reportId, ReviewReportRequest request, String moderatorEmail) {
-        Report report = reportRepository.findById(reportId)
+        Report report = reportRepository.findByIdForUpdate(reportId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Report not found."));
         if (report.getReviewStatus() != ReviewStatus.PENDING) {
             throw new ResponseStatusException(HttpStatus.CONFLICT, "This report has already been reviewed.");
@@ -62,7 +62,7 @@ public class ModerationService {
                 ? ReviewStatus.APPROVED
                 : ReviewStatus.REJECTED;
         report.review(decision);
-        auditRepository.save(new ModerationAudit(report, moderator, decision.name(), Instant.now()));
+        auditRepository.save(new ModerationAudit(report, moderator, decision, Instant.now()));
     }
 
     private ModerationReportResponse toResponse(Report report) {
@@ -85,7 +85,7 @@ public class ModerationService {
                 report.getFeature().getLabel(),
                 report.getFeature().getType(),
                 report.getStatus(),
-                audit.getDecision(),
+                audit.getDecision().name(),
                 audit.getModerator().getEmail(),
                 audit.getReviewedAt());
     }
