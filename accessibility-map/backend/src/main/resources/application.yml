@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: ${ACCESSMAP_H2_URL:jdbc:h2:file:./data/accessmap;MODE=PostgreSQL}
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  h2:
+    console:
+      enabled: false
+  flyway:
+    enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+app:
+  cors:
+    allowed-origins: ${ACCESSMAP_CORS_ORIGINS:http://localhost:5173,http://127.0.0.1:5173}
+  security:
+    jwt-secret: ${ACCESSMAP_JWT_SECRET:YWNjZXNzbWFwLWxvY2FsLWRldi1zZWNyZXQtY2hhbmdlLW1lLTIwMjY=}
+    jwt-expiration-ms: ${ACCESSMAP_JWT_EXPIRATION_MS:1800000}

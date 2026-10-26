@@ -1,0 +1,4043 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-10-25T18:57:06Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "way/34404757",
+      "properties": {
+        "@id": "way/34404757",
+        "name": "Dr. Ram Manohar Lohia Hospital",
+        "amenity": "hospital",
+        "addr:full": "Baba Kharak Singh Marg, Near Bangla Sahib Gurudwara"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2007463,
+          28.6260617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/289405078",
+      "properties": {
+        "@id": "way/289405078",
+        "name": "Guru Nanak Eye Hospital",
+        "amenity": "hospital",
+        "addr:full": "Minto Road, Mahavir Ranjeet Singh Marg,Delhi Gate"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2322347,
+          28.6383024
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/294522137",
+      "properties": {
+        "@id": "way/294522137",
+        "name": "Mrs. Girdhar Lal Maternity Hospital",
+        "amenity": "hospital",
+        "addr:full": "Jawaharlal Nehru Marg, Ajmeri Gate, Near New Delhi Railway Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2245015,
+          28.6433234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/295808332",
+      "properties": {
+        "@id": "way/295808332",
+        "name": "British Council Division",
+        "amenity": "library",
+        "addr:housenumber": "17",
+        "addr:street": "Kasturba Gandhi Marg",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2222384,
+          28.6269475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/351418783",
+      "properties": {
+        "@id": "way/351418783",
+        "name": "Patel Chowk",
+        "railway": "station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2144911,
+          28.6233674
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/554257833",
+      "properties": {
+        "@id": "node/554257833",
+        "name": "Shivaji Stadium",
+        "railway": "station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2113218,
+          28.6288963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/554257841",
+      "properties": {
+        "@id": "node/554257841",
+        "name": "New Delhi",
+        "railway": "station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2227421,
+          28.6434826
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/928491343",
+      "properties": {
+        "@id": "node/928491343",
+        "name": "Delhi Heart and Lung Institute Super Speciality Hospital",
+        "amenity": "hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2052683,
+          28.6416777
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/928550280",
+      "properties": {
+        "@id": "node/928550280",
+        "name": "Hotel Metropolis",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2105994,
+          28.6407045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/928567979",
+      "properties": {
+        "@id": "node/928567979",
+        "name": "Piccadelhi",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2196937,
+          28.635243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/938409545",
+      "properties": {
+        "@id": "node/938409545",
+        "name": "New Delhi Airport Express Terminal",
+        "railway": "station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2231116,
+          28.6424786
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1184509690",
+      "properties": {
+        "@id": "node/1184509690",
+        "name": "Internet",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2125387,
+          28.6410051
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1193078528",
+      "properties": {
+        "@id": "way/1193078528",
+        "name": "Juggernaut",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2260694,
+          28.6294215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1233269501",
+      "properties": {
+        "@id": "way/1233269501",
+        "name": "Warehouse Café",
+        "amenity": "restaurant",
+        "addr:street": "Inner Circle",
+        "addr:suburb": "Connaught Place",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2210359,
+          28.6337784
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1241932078",
+      "properties": {
+        "@id": "node/1241932078",
+        "name": "Bangla Foods",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2083619,
+          28.6333595
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1251938028",
+      "properties": {
+        "@id": "way/1251938028",
+        "name": "Third Wave Coffee Roasters",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2201094,
+          28.6342957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1251938029",
+      "properties": {
+        "@id": "way/1251938029",
+        "name": "Dr. Zombie",
+        "amenity": "restaurant",
+        "addr:housenumber": "35",
+        "addr:street": "Inner Circle",
+        "addr:suburb": "Connaught Place",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2202392,
+          28.6343276
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1251938032",
+      "properties": {
+        "@id": "way/1251938032",
+        "name": "Openhouse Cafe",
+        "amenity": "restaurant",
+        "addr:housenumber": "37",
+        "addr:street": "Inner Circle",
+        "addr:suburb": "Connaught Place",
+        "addr:city": "Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2204345,
+          28.6342632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1252056678",
+      "properties": {
+        "@id": "way/1252056678",
+        "name": "Cafe MRP",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2206395,
+          28.6345944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1252224959",
+      "properties": {
+        "@id": "way/1252224959",
+        "name": "Chai 24/7",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2184888,
+          28.6347534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1306328990",
+      "properties": {
+        "@id": "way/1306328990",
+        "name": "Third Wave Coffee Roasters",
+        "amenity": "cafe",
+        "addr:housenumber": "11"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2215244,
+          28.6326153
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1475265592",
+      "properties": {
+        "@id": "way/1475265592",
+        "name": "Sagar Ratna",
+        "amenity": "restaurant",
+        "addr:street": "Janpath",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2197474,
+          28.6270536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1493039982",
+      "properties": {
+        "@id": "way/1493039982",
+        "name": "Blue Tokai Coffee Roasters",
+        "amenity": "cafe",
+        "addr:housenumber": "44",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2218734,
+          28.6310249
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1510743786",
+      "properties": {
+        "@id": "way/1510743786",
+        "name": "Tan Coffee",
+        "amenity": "cafe",
+        "addr:housenumber": "35/5;35/6;35/7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.218215,
+          28.6346461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1552721232",
+      "properties": {
+        "@id": "way/1552721232",
+        "name": "Chaayos",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2205072,
+          28.6313504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1556466158",
+      "properties": {
+        "@id": "node/1556466158",
+        "name": "Spice Route",
+        "amenity": "restaurant",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2181175,
+          28.6253844
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1563325267",
+      "properties": {
+        "@id": "node/1563325267",
+        "name": "Nathus Sweets",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2320267,
+          28.6297269
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1563325307",
+      "properties": {
+        "@id": "node/1563325307",
+        "name": "Bengali Sweet House",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2318985,
+          28.629465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1940318525",
+      "properties": {
+        "@id": "node/1940318525",
+        "name": "Club India Restaurant",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2137081,
+          28.6409319
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1940318533",
+      "properties": {
+        "@id": "node/1940318533",
+        "name": "Madan Café",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2111472,
+          28.6407272
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1940318549",
+      "properties": {
+        "@id": "node/1940318549",
+        "name": "New Mt. Everest Restaurant",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.213836,
+          28.641034
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1988513598",
+      "properties": {
+        "@id": "node/1988513598",
+        "name": "Shivaji Bridge",
+        "railway": "station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2266682,
+          28.6334521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2410180166",
+      "properties": {
+        "@id": "node/2410180166",
+        "name": "Starbucks",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2177075,
+          28.6321974
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2591114289",
+      "properties": {
+        "@id": "node/2591114289",
+        "name": "Indian Coffee House",
+        "amenity": "restaurant",
+        "addr:street": "Baba Kharak Singh Marg",
+        "addr:suburb": "Connaught Place",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2160507,
+          28.6306895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2592537223",
+      "properties": {
+        "@id": "node/2592537223",
+        "name": "Hira Sweets",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.220063,
+          28.6353527
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2592537225",
+      "properties": {
+        "@id": "node/2592537225",
+        "name": "Sayam Roof Top Restaurant",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2137445,
+          28.6411417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2699335584",
+      "properties": {
+        "@id": "node/2699335584",
+        "name": "General Library",
+        "amenity": "library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.209199,
+          28.6396027
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2709534496",
+      "properties": {
+        "@id": "node/2709534496",
+        "name": "Keshav Restaurant",
+        "amenity": "restaurant",
+        "addr:street": "Radial Road 6",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2230833,
+          28.6337495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3242109311",
+      "properties": {
+        "@id": "node/3242109311",
+        "name": "The Exotic Rooftop Restaurant",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2137687,
+          28.6409844
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3242109751",
+      "properties": {
+        "@id": "node/3242109751",
+        "name": "Madras Coffee House",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2163093,
+          28.6318506
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3250376814",
+      "properties": {
+        "@id": "node/3250376814",
+        "name": "쉼터",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2132453,
+          28.6414451
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3269429079",
+      "properties": {
+        "@id": "node/3269429079",
+        "name": "Tadka",
+        "amenity": "restaurant",
+        "addr:housenumber": "4986",
+        "addr:street": "Ramdwara Road"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2131013,
+          28.6403009
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3704734413",
+      "properties": {
+        "@id": "node/3704734413",
+        "name": "Nando's",
+        "amenity": "restaurant",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2197896,
+          28.6309879
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4069815728",
+      "properties": {
+        "@id": "node/4069815728",
+        "name": "The Colonnade",
+        "amenity": "restaurant",
+        "addr:housenumber": "B-23",
+        "addr:street": "Inner Circle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2190699,
+          28.6342635
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4069858894",
+      "properties": {
+        "@id": "node/4069858894",
+        "name": "Gola",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.220127,
+          28.6352724
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4122592291",
+      "properties": {
+        "@id": "node/4122592291",
+        "name": "Odeon sweets",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2080471,
+          28.6334275
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4211994391",
+      "properties": {
+        "@id": "node/4211994391",
+        "name": "Malhotra",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2105515,
+          28.6410445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4219631340",
+      "properties": {
+        "@id": "node/4219631340",
+        "name": "Sam's Cafe",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2126799,
+          28.6410923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4241254891",
+      "properties": {
+        "@id": "node/4241254891",
+        "name": "Starbucks",
+        "amenity": "cafe",
+        "addr:housenumber": "16",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2204826,
+          28.6302915
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4262365091",
+      "properties": {
+        "@id": "node/4262365091",
+        "name": "Festa Cafe ",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2104527,
+          28.6409134
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4336565091",
+      "properties": {
+        "@id": "node/4336565091",
+        "name": "Kitchen Cafe Roof Top",
+        "amenity": "cafe",
+        "addr:street": "Main Bazaar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2128901,
+          28.6409875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4336790092",
+      "properties": {
+        "@id": "node/4336790092",
+        "name": "Café office office",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2202933,
+          28.6269741
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4338105559",
+      "properties": {
+        "@id": "node/4338105559",
+        "name": "Zaffran",
+        "amenity": "restaurant",
+        "addr:housenumber": "26/28",
+        "addr:street": "Radial Road No.6",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2213244,
+          28.6337656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4338129371",
+      "properties": {
+        "@id": "node/4338129371",
+        "name": "Barbeque Nation",
+        "amenity": "restaurant",
+        "addr:housenumber": "N-96",
+        "addr:street": "2nd Floor, Munshi Lal Building, Connaught Place",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2206535,
+          28.6303156
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4341101093",
+      "properties": {
+        "@id": "node/4341101093",
+        "name": "Nepali Food",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2144269,
+          28.6411171
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4350522692",
+      "properties": {
+        "@id": "node/4350522692",
+        "name": "Malhotra",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2103053,
+          28.6408661
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4389398989",
+      "properties": {
+        "@id": "node/4389398989",
+        "name": "Pind Balluchi",
+        "amenity": "restaurant",
+        "addr:housenumber": "13",
+        "addr:street": "Sansad Marg",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.217545,
+          28.6303463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4391613189",
+      "properties": {
+        "@id": "node/4391613189",
+        "name": "Rajdhani",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2204846,
+          28.6298048
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4401493065",
+      "properties": {
+        "@id": "node/4401493065",
+        "name": "Neelam Restaurant",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2179887,
+          28.6420621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4460479219",
+      "properties": {
+        "@id": "node/4460479219",
+        "name": "Fa Yian The Chinese Restaurant",
+        "amenity": "restaurant",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2173651,
+          28.6327733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4565027989",
+      "properties": {
+        "@id": "node/4565027989",
+        "name": "Wow Cafe",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2147624,
+          28.6412137
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4656714717",
+      "properties": {
+        "@id": "node/4656714717",
+        "name": "NATRAJ restaurant",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2103819,
+          28.6424044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4679882984",
+      "properties": {
+        "@id": "node/4679882984",
+        "name": "Biryani Blues",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2205834,
+          28.6298227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4711571792",
+      "properties": {
+        "@id": "node/4711571792",
+        "name": "Embassy Restaurant ( Samosa)",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2211826,
+          28.6336538
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4715157790",
+      "properties": {
+        "@id": "node/4715157790",
+        "name": "Malabar Hotel",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2182562,
+          28.6423302
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4715157791",
+      "properties": {
+        "@id": "node/4715157791",
+        "name": "Hotel Madras Dx",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.218265,
+          28.642273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4715162190",
+      "properties": {
+        "@id": "node/4715162190",
+        "name": "Hyderabadi Dum Biriyaani",
+        "amenity": "restaurant",
+        "addr:housenumber": "113",
+        "addr:street": "Amir Kaur Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2182489,
+          28.6424057
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4715173889",
+      "properties": {
+        "@id": "node/4715173889",
+        "name": "South Indian Foods",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2182429,
+          28.6424536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4752292921",
+      "properties": {
+        "@id": "node/4752292921",
+        "name": "Everest Bakery Cafe",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2147806,
+          28.6417215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4772064342",
+      "properties": {
+        "@id": "node/4772064342",
+        "name": "Safari Restro Lounge",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2078492,
+          28.6319603
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4772753924",
+      "properties": {
+        "@id": "node/4772753924",
+        "name": "Rishi Vaishno Dhaba",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.217099,
+          28.6405446
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4773105444",
+      "properties": {
+        "@id": "node/4773105444",
+        "name": "Sonu",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2127435,
+          28.6409944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4783668221",
+      "properties": {
+        "@id": "node/4783668221",
+        "name": "Kwality",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2172701,
+          28.6299114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4857522521",
+      "properties": {
+        "@id": "node/4857522521",
+        "name": "Everest kitchen",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2135151,
+          28.6411046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4882164023",
+      "properties": {
+        "@id": "node/4882164023",
+        "name": "Chaayos",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2206262,
+          28.6314625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4908782321",
+      "properties": {
+        "@id": "node/4908782321",
+        "name": "Kathmandu Food Cafe",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2126057,
+          28.6418156
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4959734021",
+      "properties": {
+        "@id": "node/4959734021",
+        "name": "Lazeez Affaire",
+        "amenity": "restaurant",
+        "addr:housenumber": "12",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2206088,
+          28.6353146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4959734022",
+      "properties": {
+        "@id": "node/4959734022",
+        "name": "Kovil",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2212936,
+          28.6333695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4985058921",
+      "properties": {
+        "@id": "node/4985058921",
+        "name": "Thalee",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2108048,
+          28.6409867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5017491421",
+      "properties": {
+        "@id": "node/5017491421",
+        "name": "Pizza Hut",
+        "amenity": "restaurant",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2198691,
+          28.6275145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5017912424",
+      "properties": {
+        "@id": "node/5017912424",
+        "name": "Mughlai Junction",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2205444,
+          28.6307517
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5073788621",
+      "properties": {
+        "@id": "node/5073788621",
+        "name": "saravan bhavan",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2194157,
+          28.6249108
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5109849421",
+      "properties": {
+        "@id": "node/5109849421",
+        "name": "The Immigrant Cafe",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.218784,
+          28.6341541
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5329504729",
+      "properties": {
+        "@id": "node/5329504729",
+        "name": "Sagar Ratna",
+        "amenity": "restaurant",
+        "addr:housenumber": "15",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2203937,
+          28.6353922
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5488627982",
+      "properties": {
+        "@id": "node/5488627982",
+        "name": "Krishna Cafe",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2136081,
+          28.6411123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5521617170",
+      "properties": {
+        "@id": "node/5521617170",
+        "name": "Barbeque Nation",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2169211,
+          28.6309182
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5634524438",
+      "properties": {
+        "@id": "node/5634524438",
+        "name": "Pind Balluchi",
+        "amenity": "restaurant",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.219755,
+          28.6291804
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5647754113",
+      "properties": {
+        "@id": "node/5647754113",
+        "name": "Chili's",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2223238,
+          28.6315666
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5647754300",
+      "properties": {
+        "@id": "node/5647754300",
+        "name": "Chaayos",
+        "amenity": "cafe",
+        "addr:housenumber": "66",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2222789,
+          28.6315876
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5647754302",
+      "properties": {
+        "@id": "node/5647754302",
+        "name": "Chelvies Coffee Company",
+        "amenity": "cafe",
+        "addr:housenumber": "6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2221888,
+          28.6316939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5656397310",
+      "properties": {
+        "@id": "node/5656397310",
+        "name": "Rodeo",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2179864,
+          28.633169
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5709171322",
+      "properties": {
+        "@id": "node/5709171322",
+        "name": "The Chai Story",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.218088,
+          28.6345227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5784310847",
+      "properties": {
+        "@id": "node/5784310847",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy",
+        "addr:housenumber": "8",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.217038,
+          28.6337914
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5784310848",
+      "properties": {
+        "@id": "node/5784310848",
+        "name": "Si Nonna's",
+        "amenity": "restaurant",
+        "addr:housenumber": "4;5;6"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.217254,
+          28.6339281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5784312104",
+      "properties": {
+        "@id": "node/5784312104",
+        "name": "Xero Degrees",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.216992,
+          28.6337234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5784312301",
+      "properties": {
+        "@id": "node/5784312301",
+        "name": "Medicine House",
+        "amenity": "pharmacy",
+        "addr:housenumber": "04",
+        "addr:street": "D00",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2173285,
+          28.6338871
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5784312302",
+      "properties": {
+        "@id": "node/5784312302",
+        "name": "Nath Brothers",
+        "amenity": "pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2173585,
+          28.6338668
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5810594585",
+      "properties": {
+        "@id": "node/5810594585",
+        "name": "Chai Point",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2179671,
+          28.6340726
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6047921386",
+      "properties": {
+        "@id": "node/6047921386",
+        "name": "Diamond restaurant",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2126034,
+          28.6410202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6073119985",
+      "properties": {
+        "@id": "node/6073119985",
+        "name": "The Junkyard Cafe",
+        "amenity": "cafe",
+        "addr:street": "Outer Circle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2207212,
+          28.6303838
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6094909115",
+      "properties": {
+        "@id": "node/6094909115",
+        "name": "Grand Singh restaurant",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.211572,
+          28.6407001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6131069513",
+      "properties": {
+        "@id": "node/6131069513",
+        "name": "New Delhi",
+        "railway": "station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2217499,
+          28.6419258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6161686838",
+      "properties": {
+        "@id": "node/6161686838",
+        "name": "Mother India",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2190315,
+          28.6353515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6161689896",
+      "properties": {
+        "@id": "node/6161689896",
+        "name": "United Coffee House",
+        "amenity": "restaurant",
+        "addr:housenumber": "15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2213733,
+          28.6323784
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6161690529",
+      "properties": {
+        "@id": "node/6161690529",
+        "name": "Véda",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2181263,
+          28.6350577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6161690587",
+      "properties": {
+        "@id": "node/6161690587",
+        "name": "Wagh Bakri Tea Lounge",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2220221,
+          28.6343528
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6161690588",
+      "properties": {
+        "@id": "node/6161690588",
+        "name": "Roma by Unplugged Courtyard",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2214575,
+          28.6344013
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6161987878",
+      "properties": {
+        "@id": "node/6161987878",
+        "name": "Hard Rock Cafe",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2197582,
+          28.6291307
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6161987883",
+      "properties": {
+        "@id": "node/6161987883",
+        "name": "Local",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2210617,
+          28.6298758
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6187928085",
+      "properties": {
+        "@id": "node/6187928085",
+        "name": "Mittal Teas",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2229648,
+          28.6299698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6203987736",
+      "properties": {
+        "@id": "node/6203987736",
+        "name": "Cafe Coffee Day",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2198505,
+          28.6330613
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6224257207",
+      "properties": {
+        "@id": "node/6224257207",
+        "name": "Triveni Terrace Cafe",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2326929,
+          28.627319
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6278067985",
+      "properties": {
+        "@id": "node/6278067985",
+        "name": "Rajasthali",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2203803,
+          28.6347294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6278106187",
+      "properties": {
+        "@id": "node/6278106187",
+        "name": "Hotmess",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2223125,
+          28.6325274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6495330860",
+      "properties": {
+        "@id": "node/6495330860",
+        "name": "Cafe Coffee Day",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2194568,
+          28.6343368
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6495330876",
+      "properties": {
+        "@id": "node/6495330876",
+        "name": "Zen",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2192315,
+          28.6342714
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6495346838",
+      "properties": {
+        "@id": "node/6495346838",
+        "name": "The Big Chill",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2191621,
+          28.6343244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6539894850",
+      "properties": {
+        "@id": "node/6539894850",
+        "name": "Ramakrishna Ashram Marg",
+        "railway": "station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2085787,
+          28.6392436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6539894851",
+      "properties": {
+        "@id": "node/6539894851",
+        "name": "Rajiv Chowk",
+        "railway": "station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2193123,
+          28.6327062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6539894855",
+      "properties": {
+        "@id": "node/6539894855",
+        "name": "Barakhambha Road",
+        "railway": "station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2250046,
+          28.6297676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6539894856",
+      "properties": {
+        "@id": "node/6539894856",
+        "name": "Mandi House",
+        "railway": "station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2341966,
+          28.6256122
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6566966468",
+      "properties": {
+        "@id": "node/6566966468",
+        "name": "OTB Café",
+        "amenity": "cafe",
+        "addr:housenumber": "B-49",
+        "addr:street": "Connaught Circus (Indira Chowk), Connaught Place",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2182711,
+          28.6343601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6657141286",
+      "properties": {
+        "@id": "node/6657141286",
+        "name": "Bistrot 55",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2136434,
+          28.6409128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6676143713",
+      "properties": {
+        "@id": "node/6676143713",
+        "name": "The Art House Cafe",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2212797,
+          28.6305595
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6707994776",
+      "properties": {
+        "@id": "node/6707994776",
+        "name": "Shake Square",
+        "amenity": "restaurant",
+        "addr:housenumber": "42/2",
+        "addr:street": "Middle Circle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2205246,
+          28.634703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6734411085",
+      "properties": {
+        "@id": "node/6734411085",
+        "name": "Open Hand Cafe (top top ;)",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2117485,
+          28.6405754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6792923897",
+      "properties": {
+        "@id": "node/6792923897",
+        "name": "Sorento",
+        "amenity": "restaurant",
+        "addr:housenumber": "19",
+        "addr:street": "Ashoka Road",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2180853,
+          28.6209452
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6814370613",
+      "properties": {
+        "@id": "node/6814370613",
+        "name": "DePaul's",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2186728,
+          28.6288925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7018886726",
+      "properties": {
+        "@id": "node/7018886726",
+        "name": "Patel Chowk",
+        "railway": "station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.214031,
+          28.6229664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7041400209",
+      "properties": {
+        "@id": "node/7041400209",
+        "name": "Sandoz",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2220056,
+          28.6344467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7044903485",
+      "properties": {
+        "@id": "node/7044903485",
+        "name": "Minar",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2219125,
+          28.6345679
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7083796923",
+      "properties": {
+        "@id": "node/7083796923",
+        "name": "Caffè Tonino",
+        "amenity": "restaurant",
+        "addr:housenumber": "9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2195254,
+          28.6350184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7083916145",
+      "properties": {
+        "@id": "node/7083916145",
+        "name": "Hashery",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2180918,
+          28.6342664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7110019814",
+      "properties": {
+        "@id": "node/7110019814",
+        "name": "National Restaurant",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2225088,
+          28.6345219
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7138493129",
+      "properties": {
+        "@id": "node/7138493129",
+        "name": "President Estate Clinic",
+        "amenity": "clinic",
+        "addr:full": "No. 27, North Avenue Area, Near R M L Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2004083,
+          28.6208562
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7138493163",
+      "properties": {
+        "@id": "node/7138493163",
+        "name": "New Delhi Municipal Council Polyclinic",
+        "amenity": "clinic",
+        "addr:full": "Shaheed Bhagat Singh Marg, DIZ Area, Connaught Place"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2111811,
+          28.633024
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7138493190",
+      "properties": {
+        "@id": "node/7138493190",
+        "name": "Babar Road Allopathic Dispensary",
+        "amenity": "clinic",
+        "addr:full": "42, Ground Floor, Babar Road, Dispensary Complex"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.234083,
+          28.6295482
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7138493193",
+      "properties": {
+        "@id": "node/7138493193",
+        "name": "Kalawati Saran Children's Hospital",
+        "amenity": "hospital",
+        "addr:full": "C- 604, Connaught Circus, DIZ Area, Connaught Place, New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2110664,
+          28.6357652
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7138493247",
+      "properties": {
+        "@id": "node/7138493247",
+        "name": "H.C.M. Lane Allopathic Dispensary",
+        "amenity": "clinic",
+        "addr:full": "18-A, Telegraph Lane, Near Bhartiya Vidya Bhawan, Janpath , Diwanchand Imangning Centre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2227032,
+          28.6227119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7138493252",
+      "properties": {
+        "@id": "node/7138493252",
+        "name": "CGHS Wellness Centre Kali Bari",
+        "amenity": "clinic",
+        "addr:full": "DIZ Area, Udyan marg, Kalibari Marg, Near Birla Mandir"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2001398,
+          28.6288565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7138493258",
+      "properties": {
+        "@id": "node/7138493258",
+        "name": "Central Hospital (Northern Railways)",
+        "amenity": "hospital",
+        "addr:full": "Basant Lane, Paharganj, Connaught Place"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2173905,
+          28.6365867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7138534287",
+      "properties": {
+        "@id": "node/7138534287",
+        "name": "Lady Hardinge Medical College & Associated Hospitals",
+        "amenity": "hospital",
+        "addr:full": "C-604, Shaheed Bhagat Singh Road, Diz Area, Connaught Place, New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.212909,
+          28.634138
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7138534362",
+      "properties": {
+        "@id": "node/7138534362",
+        "name": "ESI Dispensary, Chuna Mandi Paharganj",
+        "amenity": "clinic",
+        "addr:full": "ESI Dispensary Chuna Mandi, gali No.-10, Pahargaj, New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2098113,
+          28.6427947
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7138534396",
+      "properties": {
+        "@id": "node/7138534396",
+        "name": "CGHS Dispensary, C.G. Road",
+        "amenity": "clinic",
+        "addr:full": "Aram Bagh, Behind Paharganj Police station, Pahargaj"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2084424,
+          28.642259
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7222985985",
+      "properties": {
+        "@id": "node/7222985985",
+        "name": "Singh’s café & restaurant",
+        "amenity": "restaurant",
+        "addr:street": "1176 Main Bazar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2134007,
+          28.6411587
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8018558072",
+      "properties": {
+        "@id": "node/8018558072",
+        "name": "Rajiv Chowk",
+        "railway": "station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2196985,
+          28.6327786
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8044305077",
+      "properties": {
+        "@id": "node/8044305077",
+        "name": "Travel Yoga Cafe",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2205669,
+          28.6357531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8151189839",
+      "properties": {
+        "@id": "node/8151189839",
+        "name": "Parikrama - The Revolving Restaurant",
+        "amenity": "restaurant",
+        "addr:full": "Antriksh Bhavan, 22, KG Marg, Barakhamba, New Delhi, Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2229395,
+          28.6287272
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8151246340",
+      "properties": {
+        "@id": "node/8151246340",
+        "name": "Arvind Medicare",
+        "amenity": "hospital",
+        "addr:full": "L-43, Connaught Cir, Hanuman Road Area, Connaught Place, New Delhi, Delhi",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2170294,
+          28.6311711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8151246349",
+      "properties": {
+        "@id": "node/8151246349",
+        "name": "General Williams Hospital",
+        "amenity": "hospital",
+        "addr:full": "40, Tolstoy Rd, Atul Grove Road, Janpath, Connaught Place, New Delhi, Delhi",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2182706,
+          28.6267808
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8982336371",
+      "properties": {
+        "@id": "node/8982336371",
+        "name": "Cafe Coffee Day",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2197099,
+          28.6267988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9037075910",
+      "properties": {
+        "@id": "node/9037075910",
+        "name": "Nik Baker's",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2198235,
+          28.6304553
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9239861666",
+      "properties": {
+        "@id": "node/9239861666",
+        "name": "Barbeque Nation",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2207134,
+          28.6303516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9239861671",
+      "properties": {
+        "@id": "node/9239861671",
+        "name": "Blues",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2206386,
+          28.6303321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9239861673",
+      "properties": {
+        "@id": "node/9239861673",
+        "name": "Castle's Barbeque",
+        "amenity": "restaurant",
+        "addr:street": "Outer Circle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.22068,
+          28.6303565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9239861674",
+      "properties": {
+        "@id": "node/9239861674",
+        "name": "Taste of China",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2206681,
+          28.6303371
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9239861686",
+      "properties": {
+        "@id": "node/9239861686",
+        "name": "Ardor 2.1",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2201334,
+          28.6302128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9279741263",
+      "properties": {
+        "@id": "node/9279741263",
+        "name": "DS Dosa Factory",
+        "amenity": "restaurant",
+        "addr:housenumber": "N-19",
+        "addr:street": "Outer Circle",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2208085,
+          28.6303457
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9584236507",
+      "properties": {
+        "@id": "node/9584236507",
+        "name": "Janpath",
+        "railway": "station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2192587,
+          28.6240485
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9920295123",
+      "properties": {
+        "@id": "node/9920295123",
+        "name": "Mandi House",
+        "railway": "station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2341926,
+          28.6255149
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9952989417",
+      "properties": {
+        "@id": "node/9952989417",
+        "name": "Cafe Coffee Day",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2185,
+          28.6339517
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10129613417",
+      "properties": {
+        "@id": "node/10129613417",
+        "name": "New Madras Restraunt (NMR)",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2093712,
+          28.644045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10570234009",
+      "properties": {
+        "@id": "node/10570234009",
+        "name": "San Gimignano",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2184377,
+          28.6254773
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10579381741",
+      "properties": {
+        "@id": "node/10579381741",
+        "name": "Chido",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2226309,
+          28.6323178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10773291097",
+      "properties": {
+        "@id": "node/10773291097",
+        "name": "Dāsaprakāsh",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2177385,
+          28.6346754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10905351895",
+      "properties": {
+        "@id": "node/10905351895",
+        "name": "Harlequin",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2195263,
+          28.6346142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10910516588",
+      "properties": {
+        "@id": "node/10910516588",
+        "name": "Andhra Canteen",
+        "amenity": "restaurant",
+        "addr:housenumber": "M-58/59",
+        "addr:street": "Middle Circle",
+        "addr:suburb": "Connaught Place",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2221648,
+          28.6336017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10924124873",
+      "properties": {
+        "@id": "node/10924124873",
+        "name": "Mount Fuji",
+        "amenity": "restaurant",
+        "addr:housenumber": "41/2",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2221821,
+          28.6330893
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10936327541",
+      "properties": {
+        "@id": "node/10936327541",
+        "name": "Ghoomar",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2201154,
+          28.6349675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10945664767",
+      "properties": {
+        "@id": "node/10945664767",
+        "name": "Guru Harkrishan Polyclinic Bangla Sahib",
+        "amenity": "hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2092035,
+          28.6267693
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11064409807",
+      "properties": {
+        "@id": "node/11064409807",
+        "name": "Dhaba",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2189583,
+          28.6342698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11225066964",
+      "properties": {
+        "@id": "node/11225066964",
+        "name": "OTB Courtyard",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2184611,
+          28.6339638
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11242857871",
+      "properties": {
+        "@id": "node/11242857871",
+        "name": "Nazeer Foods",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2214491,
+          28.6429888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11242857873",
+      "properties": {
+        "@id": "node/11242857873",
+        "name": "IRCTC Food Plaza",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2214437,
+          28.6430383
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11242865005",
+      "properties": {
+        "@id": "node/11242865005",
+        "name": "Jan-Aahar",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2215364,
+          28.642164
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11252471885",
+      "properties": {
+        "@id": "node/11252471885",
+        "name": "Diggin",
+        "amenity": "restaurant",
+        "addr:housenumber": "12",
+        "addr:street": "Connaught Place",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2179838,
+          28.6331447
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11397955923",
+      "properties": {
+        "@id": "node/11397955923",
+        "name": "Berco's",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2213271,
+          28.6321001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11397955924",
+      "properties": {
+        "@id": "node/11397955924",
+        "name": "QBA",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2212883,
+          28.6321251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11449298391",
+      "properties": {
+        "@id": "node/11449298391",
+        "name": "Bheemeshwara",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2162712,
+          28.6315814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11449298392",
+      "properties": {
+        "@id": "node/11449298392",
+        "name": "Bikkgane Biryani",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2161571,
+          28.6315312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11496980431",
+      "properties": {
+        "@id": "node/11496980431",
+        "name": "Barista",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2190193,
+          28.632997
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11601991069",
+      "properties": {
+        "@id": "node/11601991069",
+        "name": "Swagat",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2104547,
+          28.6410098
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11637362094",
+      "properties": {
+        "@id": "node/11637362094",
+        "name": "The Art of Dumpling",
+        "amenity": "restaurant",
+        "addr:housenumber": "19",
+        "addr:street": "Outer Circle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2166944,
+          28.6332625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11764334602",
+      "properties": {
+        "@id": "node/11764334602",
+        "name": "Naivedyam",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2161512,
+          28.6324882
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11795527561",
+      "properties": {
+        "@id": "node/11795527561",
+        "name": "Gokulam",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2197583,
+          28.6289157
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11795614249",
+      "properties": {
+        "@id": "node/11795614249",
+        "name": "Punjab Grill",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2197378,
+          28.6284596
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11799184120",
+      "properties": {
+        "@id": "node/11799184120",
+        "name": "Xero Degrees",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2227228,
+          28.6328906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11801338398",
+      "properties": {
+        "@id": "node/11801338398",
+        "name": "Bikanervala",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2084744,
+          28.6391042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11805134682",
+      "properties": {
+        "@id": "node/11805134682",
+        "name": "Fat Tiger",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2083127,
+          28.639207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11816338569",
+      "properties": {
+        "@id": "node/11816338569",
+        "name": "Tirupati Bhawan",
+        "amenity": "cafe",
+        "addr:street": "Connaught Lane"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2226201,
+          28.6333581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11868892366",
+      "properties": {
+        "@id": "node/11868892366",
+        "name": "Foodiez",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2260475,
+          28.6296858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11869013790",
+      "properties": {
+        "@id": "node/11869013790",
+        "name": "Foodieez",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2247681,
+          28.6289688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11936527684",
+      "properties": {
+        "@id": "node/11936527684",
+        "name": "Palika Library",
+        "amenity": "library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2337334,
+          28.6295291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11937020351",
+      "properties": {
+        "@id": "node/11937020351",
+        "name": "Himachal Bhawan Dining Hall",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2330264,
+          28.6260814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11971465774",
+      "properties": {
+        "@id": "node/11971465774",
+        "name": "Del Bite",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2014836,
+          28.6440611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11982517643",
+      "properties": {
+        "@id": "node/11982517643",
+        "name": "The House Of Commons",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2226585,
+          28.6329669
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11982519975",
+      "properties": {
+        "@id": "node/11982519975",
+        "name": "The G.T. Road",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2226609,
+          28.6329741
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11982519987",
+      "properties": {
+        "@id": "node/11982519987",
+        "name": "The Imperial Spice",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2226693,
+          28.6330344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12052451552",
+      "properties": {
+        "@id": "node/12052451552",
+        "name": "Banwari Lal Charitable Trust Diagnostic Centre",
+        "amenity": "hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2042941,
+          28.6420044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12052465818",
+      "properties": {
+        "@id": "node/12052465818",
+        "name": "Vinod Medicos",
+        "amenity": "pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2114515,
+          28.6377937
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12052474063",
+      "properties": {
+        "@id": "node/12052474063",
+        "name": "Apollo Pharmacy",
+        "amenity": "pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2085135,
+          28.6337258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12054358703",
+      "properties": {
+        "@id": "node/12054358703",
+        "name": "Flavours Of China",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2175301,
+          28.6344804
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12054396927",
+      "properties": {
+        "@id": "node/12054396927",
+        "name": "Information And Reservation Centre",
+        "amenity": "internet_cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2107644,
+          28.6382012
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12422394301",
+      "properties": {
+        "@id": "node/12422394301",
+        "name": "Tirumala",
+        "amenity": "restaurant",
+        "addr:housenumber": "Block N 33/8",
+        "addr:street": "Middle Circle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2204376,
+          28.6307181
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12839647640",
+      "properties": {
+        "@id": "node/12839647640",
+        "name": "Ayush Polyclinic",
+        "amenity": "clinic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2040074,
+          28.6399323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12839647656",
+      "properties": {
+        "@id": "node/12839647656",
+        "name": "Palika Pustakalaya",
+        "amenity": "library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2043407,
+          28.6402059
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12896513992",
+      "properties": {
+        "@id": "node/12896513992",
+        "name": "Gulshan Da Dhaba",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2067022,
+          28.6324913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12896513993",
+      "properties": {
+        "@id": "node/12896513993",
+        "name": "R. K. Health Care",
+        "amenity": "pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2067303,
+          28.6324933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12896534719",
+      "properties": {
+        "@id": "node/12896534719",
+        "name": "Flavours of Chaap",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2066112,
+          28.6326424
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12896559854",
+      "properties": {
+        "@id": "node/12896559854",
+        "name": "Kaleva All day Diner Family Restaurant",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2084316,
+          28.6330218
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12896611359",
+      "properties": {
+        "@id": "node/12896611359",
+        "name": "Apollo Diagnostica Bones & Joints Clinic",
+        "amenity": "clinic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.207086,
+          28.6325356
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12896614406",
+      "properties": {
+        "@id": "node/12896614406",
+        "name": "Dayal Da Dhaba",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2066109,
+          28.6324936
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12896628035",
+      "properties": {
+        "@id": "node/12896628035",
+        "name": "Medsurg Pharma",
+        "amenity": "pharmacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2072974,
+          28.6328049
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12898800881",
+      "properties": {
+        "@id": "node/12898800881",
+        "name": "Delhi Public Library",
+        "amenity": "library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2039828,
+          28.6351463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12977503231",
+      "properties": {
+        "@id": "node/12977503231",
+        "name": "The Host",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2209454,
+          28.6316962
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12977565249",
+      "properties": {
+        "@id": "node/12977565249",
+        "name": "Gupta Foods",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2207013,
+          28.6307787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13008734918",
+      "properties": {
+        "@id": "node/13008734918",
+        "name": "iHub",
+        "amenity": "library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2224657,
+          28.6289031
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13124486537",
+      "properties": {
+        "@id": "node/13124486537",
+        "name": "Fire & Ice",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.214,
+          28.6410473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13322042901",
+      "properties": {
+        "@id": "node/13322042901",
+        "name": "Satguru Dhaba",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2143627,
+          28.642225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13322043001",
+      "properties": {
+        "@id": "node/13322043001",
+        "name": "Nothing Before Coffee",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.21805,
+          28.6340185
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13335517602",
+      "properties": {
+        "@id": "node/13335517602",
+        "name": "Karan South Indian",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2182015,
+          28.6422224
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13363652702",
+      "properties": {
+        "@id": "node/13363652702",
+        "name": "The Mandi Chowk",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2162083,
+          28.6315592
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13387065425",
+      "properties": {
+        "@id": "node/13387065425",
+        "name": "Moti Mahal",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2208232,
+          28.635255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13387065426",
+      "properties": {
+        "@id": "node/13387065426",
+        "name": "Indus Flavour",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2207415,
+          28.6353
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13387065427",
+      "properties": {
+        "@id": "node/13387065427",
+        "name": "Massala Singh",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2204849,
+          28.6353706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13447585295",
+      "properties": {
+        "@id": "node/13447585295",
+        "name": "Mocha",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.222533,
+          28.6318635
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13447601864",
+      "properties": {
+        "@id": "node/13447601864",
+        "name": "Ganpati Chole Bhature",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2231355,
+          28.6328646
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13447613995",
+      "properties": {
+        "@id": "node/13447613995",
+        "name": "Noon Al Laitoon",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2233895,
+          28.6329635
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13447614053",
+      "properties": {
+        "@id": "node/13447614053",
+        "name": "Darshini Cafe",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2225729,
+          28.6326908
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13447987229",
+      "properties": {
+        "@id": "node/13447987229",
+        "name": "Social",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.218982,
+          28.6345627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13447987230",
+      "properties": {
+        "@id": "node/13447987230",
+        "name": "Yeti",
+        "amenity": "restaurant",
+        "addr:housenumber": "41"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2190172,
+          28.6342818
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13447987233",
+      "properties": {
+        "@id": "node/13447987233",
+        "name": "Po",
+        "amenity": "restaurant",
+        "addr:housenumber": "41"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2190255,
+          28.6342575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13462006001",
+      "properties": {
+        "@id": "node/13462006001",
+        "name": "Kalsang",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.222573,
+          28.6335284
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13534261384",
+      "properties": {
+        "@id": "node/13534261384",
+        "name": "Cafe Coffee Day",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2169602,
+          28.6309429
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13564519135",
+      "properties": {
+        "@id": "node/13564519135",
+        "name": "Karigari",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2208292,
+          28.6298677
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13640908050",
+      "properties": {
+        "@id": "node/13640908050",
+        "name": "Zero Degrees",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2196631,
+          28.6326875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13692030101",
+      "properties": {
+        "@id": "node/13692030101",
+        "name": "Sudh shakari dhaba",
+        "amenity": "restaurant",
+        "addr:housenumber": "e7",
+        "addr:street": "Tagore Road"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2245951,
+          28.6416057
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13705276520",
+      "properties": {
+        "@id": "node/13705276520",
+        "name": "Metro City Pharmacy",
+        "amenity": "pharmacy",
+        "addr:housenumber": "7",
+        "addr:city": "New Delhi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2170799,
+          28.6338607
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13721755512",
+      "properties": {
+        "@id": "node/13721755512",
+        "name": "Xero Degrees",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2343446,
+          28.625251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13834324596",
+      "properties": {
+        "@id": "node/13834324596",
+        "name": "Blue Tokai",
+        "amenity": "cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2174692,
+          28.6343714
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13927682258",
+      "properties": {
+        "@id": "node/13927682258",
+        "name": "TGI Fridays",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2225505,
+          28.6319736
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14078144348",
+      "properties": {
+        "@id": "node/14078144348",
+        "name": "Xero Degrees",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.221415,
+          28.6344287
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14081722436",
+      "properties": {
+        "@id": "node/14081722436",
+        "name": "Hello Dada",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2173662,
+          28.6326381
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14082118656",
+      "properties": {
+        "@id": "node/14082118656",
+        "name": "Adyar Ananda Bhavan",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.219818,
+          28.6271809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14082118657",
+      "properties": {
+        "@id": "node/14082118657",
+        "name": "Bikanervala",
+        "amenity": "restaurant"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.2198223,
+          28.6275849
+        ]
+      }
+    }
+  ]
+}

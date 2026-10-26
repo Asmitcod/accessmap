@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/accessmap}
+    username: ${DATABASE_USERNAME:accessmap}
+    password: ${DATABASE_PASSWORD:accessmap}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+
+app:
+  security:
+    jwt-secret: ${ACCESSMAP_JWT_SECRET}

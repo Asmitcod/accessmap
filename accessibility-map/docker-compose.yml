@@ -1,0 +1,19 @@
+services:
+  database:
+    image: postgis/postgis:17-3.5
+    environment:
+      POSTGRES_DB: accessmap
+      POSTGRES_USER: accessmap
+      POSTGRES_PASSWORD: accessmap
+    ports:
+      - "5432:5432"
+    volumes:
+      - accessmap-database:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U accessmap -d accessmap"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  accessmap-database:
