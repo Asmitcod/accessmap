@@ -26,7 +26,6 @@ services:
   - type: web
     name: accessmap-demo
     runtime: static
-    plan: free
     rootDir: accessibility-map/frontend
     buildCommand: npm ci && npm run build
     staticPublishPath: ./dist
