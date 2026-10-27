@@ -149,6 +149,7 @@ function App() {
   const [authPasswordInput, setAuthPasswordInput] = useState('')
   const [authError, setAuthError] = useState('')
   const [isAuthenticating, setIsAuthenticating] = useState(false)
+  const [pendingReportRequest, setPendingReportRequest] = useState<FeatureSummary | 'new' | null>(null)
 
   useEffect(() => {
     let cancelled = false
@@ -206,16 +207,22 @@ function App() {
   function openReport(feature: FeatureSummary) {
     if (!publicContributionsEnabled) return
     if (!authToken) {
+      setPendingReportRequest(feature)
       setAuthMode('login')
       setAuthError('')
       setIsAuthOpen(true)
       return
     }
+    openReportForm(feature)
+  }
+
+  function openReportForm(feature: FeatureSummary | null) {
     setReportFeature(feature)
     setIsReportOpen(true)
-    setReportType(feature.type)
-    setReportLabel(feature.label)
-    setReportStatus(optionsByType[feature.type][0])
+    const type = feature?.type ?? 'ENTRANCE'
+    setReportType(type)
+    setReportLabel(feature?.label ?? 'Main entrance')
+    setReportStatus(optionsByType[type][0])
     setReportNote('')
     setSuccessMessage('')
   }
@@ -223,18 +230,13 @@ function App() {
   function openNewFeatureReport() {
     if (!publicContributionsEnabled) return
     if (!authToken) {
+      setPendingReportRequest('new')
       setAuthMode('login')
       setAuthError('')
       setIsAuthOpen(true)
       return
     }
-    setReportFeature(null)
-    setIsReportOpen(true)
-    setReportType('ENTRANCE')
-    setReportLabel('Main entrance')
-    setReportStatus(optionsByType.ENTRANCE[0])
-    setReportNote('')
-    setSuccessMessage('')
+    openReportForm(null)
   }
 
   function changeReportType(type: FeatureType) {
@@ -254,7 +256,12 @@ function App() {
       setIsModerator(result.moderator)
       setAuthPasswordInput('')
       setIsAuthOpen(false)
-      setSuccessMessage(`Signed in as ${result.email}.`)
+      if (pendingReportRequest) {
+        openReportForm(pendingReportRequest === 'new' ? null : pendingReportRequest)
+        setPendingReportRequest(null)
+      } else {
+        setSuccessMessage(`Signed in as ${result.email}.`)
+      }
     } catch (error) {
       setAuthError(error instanceof Error ? error.message : 'Authentication failed.')
     } finally {
@@ -451,6 +458,19 @@ function App() {
           <div className="eyebrow"><span className="eyebrow-dot" /> DELHI ACCESSIBILITY, TOGETHER</div>
           <h1>Know before<br />you <em>go.</em></h1>
           <p>Real-world access changes. Find current community updates on entrances, lifts, ramps and restrooms.</p>
+          <div className="intro-actions">
+            {publicContributionsEnabled && (
+              <button
+                className="hero-report-button"
+                type="button"
+                disabled={isOfflinePreview || !selectedPlace}
+                onClick={openNewFeatureReport}
+              >
+                <Plus size={17} /> Report an access issue
+              </button>
+            )}
+            <a className="hero-how-link" href="#how-it-works">How it works <ArrowUpRight size={14} /></a>
+          </div>
         </div>
         <div className="intro-note">
           <span className="note-icon"><ShieldCheck size={18} /></span>
@@ -684,7 +704,37 @@ function App() {
         </section>
       </div>
 
-      <footer className="page-footer" id="how-it-works">
+      <section className="how-it-works" id="how-it-works" aria-labelledby="how-it-works-title">
+        <div className="how-heading">
+          <span className="section-kicker">A CLEARER PICTURE, TOGETHER</span>
+          <h2 id="how-it-works-title">How AccessMap works</h2>
+          <p>Useful access details come from people who have been there. Here’s how to add what you know.</p>
+        </div>
+        <div className="how-steps">
+          <article className="how-step">
+            <span className="how-step-number">01</span>
+            <h3>Choose a place</h3>
+            <p>Search for a Delhi location or select its marker on the map to see the latest accessibility details.</p>
+          </article>
+          <article className="how-step">
+            <span className="how-step-number">02</span>
+            <h3>Share what you observed</h3>
+            <p>Sign in, choose an entrance, lift, ramp, or restroom, and describe its current condition.</p>
+          </article>
+          <article className="how-step">
+            <span className="how-step-number">03</span>
+            <h3>Help keep details current</h3>
+            <p>Reports are checked by a moderator before appearing on the map. Every update includes when it was confirmed.</p>
+          </article>
+        </div>
+        {publicContributionsEnabled && (
+          <button className="how-report-button" type="button" disabled={isOfflinePreview || !selectedPlace} onClick={openNewFeatureReport}>
+            <Plus size={16} /> Share an accessibility report
+          </button>
+        )}
+      </section>
+
+      <footer className="page-footer">
         <span>
           {publicContributionsEnabled
             ? 'Community-reported information can change. Verify critical access needs with the venue.'

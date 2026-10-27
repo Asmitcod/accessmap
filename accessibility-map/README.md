@@ -1,91 +1,74 @@
-# AccessMap — Delhi accessibility, together
+# AccessMap
 
-An accessibility-first map for community reports on entrances, lifts, ramps, and restrooms. The current build is an initial vertical slice: browse and search places, inspect feature status, and submit a report.
+**Know before you go.** AccessMap is a community-powered accessibility map for Delhi. Search nearby places, check current reports about entrances, lifts, ramps, and restrooms, or share an observation to help someone plan with more confidence.
 
-## Place data and attribution
+## Live links
 
-The API imports `backend/src/main/resources/osm/delhi-places.geojson` on its first start when the database is empty. It contains 245 named OpenStreetMap places in the Connaught Place pilot area. Imported places start with no accessibility features; community members can report features and their status. OSM place tags are not treated as verified accessibility reports. Place data is from OpenStreetMap contributors, © OpenStreetMap contributors, available under the Open Database License (ODbL). The map also displays OpenStreetMap tiles and links to attribution.
+- **[Open the AccessMap demo](https://accessmap-demo-38bc.onrender.com/)**
+- [API health](https://accessmap-api.onrender.com/actuator/health) · [Places API](https://accessmap-api.onrender.com/api/places)
+- [GitHub repository](https://github.com/Asmitcod/accessmap) · [Frontend source](https://github.com/Asmitcod/accessmap/tree/main/accessibility-map/frontend) · [Backend source](https://github.com/Asmitcod/accessmap/tree/main/accessibility-map/backend) · [Render Blueprint](../render.yaml)
+- [Render dashboard](https://dashboard.render.com/) · [Neon console](https://console.neon.tech/)
+- [OpenStreetMap copyright and attribution](https://www.openstreetmap.org/copyright)
 
-If the GeoJSON resource is absent, the API loads fictional demo places instead. Demo locations and reports are labelled and must not be used for travel planning. Reports submitted to the local prototype only update the local database; email verification, trust scoring, photo uploads, and notifications are not part of this milestone.
+The API is hosted on Render and uses PostgreSQL hosted by Neon. The free API service may sleep when idle, so the first request can take longer while it wakes.
+
+## What you can do
+
+- Browse and search 245 OpenStreetMap locations in the Connaught Place pilot area.
+- Select places on the map and see the latest approved accessibility reports.
+- Filter by feature type and how recently a report was confirmed.
+- Create an account and report an entrance, lift, ramp, restroom, or a new accessibility feature.
+- Update the status of an existing feature and leave an optional note.
+- Sign in as the configured moderator to review pending submissions and see moderation history.
+- Use the responsive map and report flow on desktop and mobile.
+
+All accessibility information is community-reported and may change. OpenStreetMap place data does not indicate verified accessibility. Contact a venue to confirm critical access needs before travelling.
+
+## Reporting and moderation
+
+1. Select a place on the map or search for it.
+2. Choose **Report an access issue** near the top of the page, or report a new feature from the place details.
+3. Sign in or create an account, then describe what you observed.
+4. Reports stay off the public map until a moderator reviews them. Approved reports appear with their confirmation date; rejected reports do not appear.
+
+The moderator account is provisioned when the API starts using the Render environment variables `ACCESSMAP_MODERATOR_EMAIL` and `ACCESSMAP_MODERATOR_PASSWORD`. The moderator role is saved in the database, so it persists across restarts. To promote an existing account, configure its exact email and current password. If that email already exists and the configured password does not match, the API intentionally fails startup rather than silently changing the account's credentials.
 
 ## Technology
 
-- Java 21, Spring Boot 3, Maven
-- React, TypeScript, Vite, Leaflet
-- File-backed H2 for local development; PostgreSQL/PostGIS profile for production-style persistence
-- OpenStreetMap tiles (follow the tile usage policy; use a suitable provider before production traffic)
+- **Frontend:** React, TypeScript, Vite, Leaflet
+- **Backend:** Java 21, Spring Boot, Maven, Spring Security, JWT
+- **Database:** Neon PostgreSQL in the hosted deployment; file-backed H2 for local development
+- **Deployment:** Render Blueprint, Docker, Render static site
+- **Map data and tiles:** OpenStreetMap
 
 ## Run locally
 
 Install Java 21, Maven, and Node.js 20.19+ (or 22.12+).
 
-1. Start the API from `backend`:
+### Start the API
 
-   ```powershell
-   mvn spring-boot:run
-   ```
+From `accessibility-map/backend`:
 
-   The default profile stores data in `backend/data/accessmap.mv.db` and imports the bundled OpenStreetMap places on first start. Accounts, places, features, and reports survive API restarts. Accessibility statuses remain unknown until a report is submitted. If the OSM dataset is missing, clearly labelled fictional samples are used instead. Keep this local database file private and back it up if you need to preserve your data.
+```powershell
+mvn spring-boot:run
+```
 
-   To use another H2 database URL, set `ACCESSMAP_H2_URL` before starting the API. For production configuration, provide a strong Base64-encoded `ACCESSMAP_JWT_SECRET` (at least 32 random bytes after decoding); the built-in secret is only for local development.
+By default, the API uses a local file-backed H2 database at `backend/data/accessmap.mv.db` and imports the bundled place data the first time it starts. Keep the database file private and back it up if you need to preserve local changes.
 
-2. Start the frontend from `frontend`:
+### Start the frontend
 
-   ```powershell
-   npm install
-   npm run dev
-   ```
+In another terminal, from `accessibility-map/frontend`:
 
-   Open the local URL printed by Vite. The dev server forwards `/api` calls to `http://localhost:8080`.
+```powershell
+npm ci
+npm run dev
+```
 
-3. For PostgreSQL development, start the included database and use the production database profile:
+Open the local URL printed by Vite. Its `/api` requests are proxied to `http://localhost:8080`.
 
-   ```powershell
-   docker compose up -d database
-   cd backend
-   $env:SPRING_PROFILES_ACTIVE = "production"
-   mvn spring-boot:run
-   ```
+### Configure a local moderator (optional)
 
-   The local Compose credentials are for development only. PostgreSQL uses persistent Docker volume storage. Configure strong credentials and a managed database before deployment.
-
-If the API is unavailable, the frontend displays a sample-only preview and disables report submission. Sample preview data is never sent as a real report.
-
-## Deploy a shareable demo (Render + Neon)
-
-The checked-in `render.yaml` creates a public static frontend and a Docker-based Spring Boot API. The API uses Neon PostgreSQL with Flyway migrations. Public browsing, account registration, login, and reports are enabled on this shareable prototype; moderator review is restricted to the configured moderator account. The prototype does not yet include email verification or password recovery, so public account and report abuse safeguards are limited.
-
-1. Push this repository to your GitHub account. Create a free PostgreSQL project in Neon and note its host, database name, username, and password. Keep the database credentials private.
-2. In Render, create a **Blueprint** from your GitHub repository and apply the services defined in `render.yaml`. The names `accessmap-api` and `accessmap-demo` determine the URLs used by the configuration; if you rename either service, update the API URL in `render.yaml` and the frontend origin in the API environment variables.
-3. When Render requests unsynced API environment variables, enter:
-   - `DATABASE_URL`: `jdbc:postgresql://YOUR_NEON_HOST/YOUR_DATABASE?sslmode=require`
-   - `DATABASE_USERNAME`: the Neon database username
-   - `DATABASE_PASSWORD`: the Neon database password
-   - `ACCESSMAP_JWT_SECRET`: generate a private Base64 key locally with PowerShell:
-
-     ```powershell
-     $random = [System.Security.Cryptography.RandomNumberGenerator]::Create()
-     $bytes = New-Object byte[] 32
-     $random.GetBytes($bytes)
-     [Convert]::ToBase64String($bytes)
-     ```
-
-     Paste the output directly into Render's secret field. Do not commit it or send it in chat.
-
-   - `ACCESSMAP_MODERATOR_EMAIL`: email address for the moderator account
-   - `ACCESSMAP_MODERATOR_PASSWORD`: password for that account (at least 16 characters, at most 72 UTF-8 bytes)
-
-   The blueprint sets the production profile, CORS origin, health check, public contributions, and moderator account credentials. Keep all passwords and generated secrets private. On startup, the API creates the moderator account if it does not exist, or promotes the existing account if its password matches the configured password. Its moderator role is stored in Neon and survives restarts. To configure an existing account, use the same email and password that account already uses.
-4. Wait for both Render services to finish deploying. Open `https://accessmap-api.onrender.com/actuator/health` and confirm it reports `UP`, then visit `https://accessmap-demo-38bc.onrender.com`. The API imports the bundled 245-place dataset into Neon on first start.
-5. Verify the site displays OSM attribution, login/registration work, reports can be submitted, and the configured moderator can review them.
-
-Render's free API instance may sleep while idle, so the first request after a quiet period can be slow; reload the demo once the service wakes. Check current Render and Neon free-tier quotas and retention limits before relying on the deployment. OpenStreetMap's public tile servers have a usage policy and are not a guaranteed production tile service. This deployment is a shareable prototype, not a production community launch.
-
-## Moderator account behavior
-
-New community reports are pending until approved by a moderator, and pending or rejected reports do not appear on the public map. Existing reports are treated as approved during the schema upgrade.
-
-For local development, set the moderator email and enter a password of at least 16 characters (at most 72 UTF-8 bytes) in the same PowerShell window before starting the API:
+Set both variables in the same PowerShell window before starting the API:
 
 ```powershell
 $env:ACCESSMAP_MODERATOR_EMAIL = Read-Host "Moderator email"
@@ -94,32 +77,45 @@ $env:ACCESSMAP_MODERATOR_PASSWORD = ([System.Net.NetworkCredential]::new("", $mo
 mvn spring-boot:run
 ```
 
-The API creates that account on first start. If the email already belongs to an account, its existing password must match the configured password before it is granted moderator access. In Render, set the same values as the `ACCESSMAP_MODERATOR_EMAIL` and `ACCESSMAP_MODERATOR_PASSWORD` environment variables; the moderator role is saved in Neon. If both settings are omitted, reports remain pending and no account can review them. Local environment variables are not saved after the PowerShell window closes.
+The password must be at least 16 characters and no more than 72 UTF-8 bytes. If the configured email is already registered, the password must match that account's existing password.
 
-## API
+## Deployment configuration
 
-- `GET /api/places?search=<text>` — list places and their latest non-expired feature reports.
-- `POST /api/places/{placeId}/features` — add a reported feature and its first status, for example `{ "type": "LIFT", "label": "Main building lift", "status": "WORKING", "note": "Optional detail" }`.
-- `POST /api/places/{placeId}/features/{featureId}/reports` — submit a new status for an existing feature, for example `{ "status": "OUT_OF_SERVICE", "note": "Optional detail" }`.
-- `GET /api/moderation/reports` — list pending reports (moderator role required).
-- `POST /api/moderation/reports/{reportId}/decision` — approve or reject a report (moderator role required).
-- `GET /api/moderation/reports/audit` — latest 100 moderation decisions (moderator role required).
-- `GET /actuator/health` — API health.
+The repository-root [`render.yaml`](../render.yaml) defines the API and static-site services. Render deploys the frontend at [accessmap-demo-38bc.onrender.com](https://accessmap-demo-38bc.onrender.com/) and the API at [accessmap-api.onrender.com](https://accessmap-api.onrender.com/).
 
-Reports currently use a 14-day TTL for lifts/restrooms and a 90-day TTL for entrances/ramps. Expired reports are excluded from the current status; history remains in the database.
+When applying the Blueprint, configure the prompted API values in Render's dashboard. Keep secrets out of Git and chat:
 
-Report submissions require a signed-in account. An account can submit up to 10 reports per rolling hour and 50 per rolling day, and can report the same feature only once per 24 hours. Duplicate reports return HTTP 409; exceeded limits return HTTP 429.
+- `DATABASE_URL`: Neon JDBC URL, for example `jdbc:postgresql://YOUR_NEON_HOST/YOUR_DATABASE?sslmode=require`
+- `DATABASE_USERNAME` and `DATABASE_PASSWORD`: Neon database credentials
+- `ACCESSMAP_JWT_SECRET`: private Base64-encoded random key with at least 32 bytes
+- `ACCESSMAP_MODERATOR_EMAIL` and `ACCESSMAP_MODERATOR_PASSWORD`: credentials for the moderator account
 
-New reports stay pending until moderator approval. Moderators can review them from the **Moderation** button after signing in with the configured moderator account. Approval makes the report visible; rejection keeps it off the map. Only configured moderators can read reporter emails in the review queue.
+For the moderator password, use at least 16 characters and no more than 72 UTF-8 bytes. Generate the JWT secret locally in PowerShell; do not reuse the moderator password:
 
-Moderation decisions are recorded with the report, moderator account, decision, and timestamp. Moderators can view the latest 100 decisions in the queue's **Decision history** tab. The audit endpoint and records are restricted to moderators and are not editable through the API.
+```powershell
+$random = [System.Security.Cryptography.RandomNumberGenerator]::Create()
+$bytes = New-Object byte[] 32
+$random.GetBytes($bytes)
+[Convert]::ToBase64String($bytes)
+```
 
-## Accounts and report access
+The deployment uses the production Spring profile and Flyway migrations. The backend enforces authentication and authorization independently of frontend controls.
 
-The API supports email/password registration and login. Passwords are stored as BCrypt hashes; successful auth returns a short-lived (30 minute by default) JWT. Report creation requires `Authorization: Bearer <token>`. The local development JWT secret is a public placeholder and must never be used in a deployment. For the `production` profile, set `ACCESSMAP_JWT_SECRET` to a randomly generated Base64-encoded key of at least 32 bytes.
+## API overview
 
-The frontend keeps the access token in memory only; it is cleared on refresh/sign-out. Report submissions are limited per account to 10 per rolling hour and 50 per rolling day; the same account cannot report the same feature again within 24 hours. These are basic account-level prototype safeguards, not distributed or IP-based abuse protection. Email verification, password reset, refresh tokens, account deletion/export, moderator audit logging, and account controls are not implemented yet. Do not expose public account creation or reporting to the internet until stronger abuse controls, HTTPS, moderation procedures, audit logging, privacy controls, and WCAG 2.2 AA verification are in place. The free-tier provider quotas and OpenStreetMap tile policy must also be checked before launch.
+- `GET /api/places?search=<text>` — list places and approved, non-expired feature reports.
+- `POST /api/auth/register` and `POST /api/auth/login` — create an account or receive a JWT.
+- `POST /api/places/{placeId}/features` — submit a new feature and its first status.
+- `POST /api/places/{placeId}/features/{featureId}/reports` — report a status update.
+- `GET /api/moderation/reports` — list pending reports (moderators only).
+- `POST /api/moderation/reports/{reportId}/decision` — approve or reject a report (moderators only).
+- `GET /api/moderation/reports/audit` — view recent moderation decisions (moderators only).
+- `GET /actuator/health` — service health.
 
-## Before production
+Feature reports expire from the current status view after 14 days for lifts and restrooms, and 90 days for entrances and ramps. Accounts are limited to 10 reports per rolling hour and 50 per rolling day, and cannot report the same feature more than once in 24 hours.
 
-Email verification, password recovery, stronger distributed and IP-based abuse controls, account deletion/export, audit-log retention/monitoring and operational procedures, trust/confidence scoring, privacy controls, and WCAG 2.2 AA verification are still required before a public launch. Moderation is a basic configured-account queue. Check free-tier provider quotas and the OpenStreetMap tile policy before launch.
+## Data, safety, and limitations
+
+The bundled dataset contains 245 named places from the Connaught Place pilot area. Place data is from OpenStreetMap contributors and is available under the [Open Database License (ODbL)](https://www.openstreetmap.org/copyright). The map uses OpenStreetMap tiles; follow the [tile usage policy](https://operations.osmfoundation.org/policies/tiles/), and use a suitable tile provider before scaling traffic.
+
+AccessMap is a shareable prototype, not an emergency or verified travel-planning service. Reports are not professionally audited. This version does not yet include email verification, password recovery, account deletion/export, photo uploads, or robust distributed/IP-based abuse controls. Use a unique password, and do not enter sensitive personal information in report notes. Review privacy, accessibility, moderation operations, abuse protections, and hosting quotas before any broader public launch.

@@ -44,13 +44,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .mobile-nav a:hover { color: #286b54; background: #edf5f0; }
 .mobile-nav button { border: 0; border-radius: 5px; padding: 9px; color: #53625b; text-align: left; background: #fff; font-size: 12px; cursor: pointer; }
 .mobile-nav button:hover { color: #286b54; background: #edf5f0; }
-.intro { display: flex; align-items: flex-end; justify-content: space-between; padding: 45px 0 28px; }
+.intro { display: flex; align-items: flex-end; justify-content: space-between; padding: 45px 0 28px; scroll-margin-top: 20px; }
 .eyebrow, .section-kicker { color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: 1.3px; }
 .eyebrow { display: flex; align-items: center; gap: 8px; }
 .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: #66ae91; }
 .intro h1 { margin: 12px 0 10px; color: #263832; font: 800 clamp(39px, 4.2vw, 58px)/1.02 'Segoe UI', Arial, sans-serif; letter-spacing: -3px; }
 .intro h1 em { color: var(--green); font-style: normal; }
 .intro-copy p { max-width: 440px; margin: 0; color: #737f79; font-size: 14px; line-height: 1.65; }
+.intro-actions { display: flex; align-items: center; gap: 18px; margin-top: 19px; }
+.hero-report-button, .how-report-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 8px; padding: 12px 15px; color: #fff; background: var(--green); font-size: 12px; font-weight: 700; cursor: pointer; transition: background .18s ease, transform .18s ease; }
+.hero-report-button:hover, .how-report-button:hover { transform: translateY(-1px); background: var(--deep-green); }
+.hero-report-button:disabled, .how-report-button:disabled { transform: none; cursor: not-allowed; opacity: .55; }
+.hero-how-link { display: inline-flex; align-items: center; gap: 5px; color: var(--deep-green); font-size: 12px; font-weight: 700; }
+.hero-how-link:hover { text-decoration: underline; text-underline-offset: 3px; }
 .intro-note { display: flex; align-items: center; gap: 11px; margin: 0 20px 7px 25px; color: #718078; font-size: 11px; line-height: 1.7; }
 .intro-note strong { color: #41534b; font-weight: 700; }
 .note-icon { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid #dce8df; border-radius: 50%; color: var(--green); background: #f1f7f2; }
@@ -129,6 +135,16 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .legend-dot { width: 7px; height: 7px; margin: 0; }
 .map-caption { position: absolute; z-index: 500; bottom: 13px; left: 13px; display: flex; align-items: center; gap: 6px; border: 1px solid #e8ebe4; border-radius: 6px; padding: 8px 10px; color: #6b7a72; background: #ffffffed; font-size: 9px; }
 .map-caption svg { color: #4b9d7b; }
+.how-it-works { scroll-margin-top: 24px; margin: 46px 0 10px; border: 1px solid #e1e9e1; border-radius: 14px; padding: 30px; background: linear-gradient(135deg, #f1f7f1 0%, #fbfcf9 68%, #edf5f0 100%); }
+.how-heading { max-width: 560px; }
+.how-heading h2 { margin: 8px 0 7px; color: #304239; font: 750 clamp(22px, 2.8vw, 30px)/1.15 'Segoe UI', Arial, sans-serif; letter-spacing: -.8px; }
+.how-heading p { margin: 0; color: #718078; font-size: 12px; line-height: 1.65; }
+.how-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; margin-top: 23px; }
+.how-step { min-height: 150px; border: 1px solid #e6ebe4; border-radius: 10px; padding: 17px; background: #ffffffd9; }
+.how-step-number { display: inline-grid; width: 29px; height: 29px; place-items: center; border-radius: 8px; color: var(--deep-green); background: #e7f2e9; font-size: 10px; font-weight: 800; }
+.how-step h3 { margin: 13px 0 6px; color: #36483f; font-size: 13px; }
+.how-step p { margin: 0; color: #77837c; font-size: 11px; line-height: 1.6; }
+.how-report-button { margin-top: 20px; }
 .page-footer { display: flex; justify-content: space-between; gap: 12px; padding: 15px 0 20px; color: #87918b; font-size: 10px; }
 .page-footer a { color: #597d6c; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; clip-path: inset(50%); }
@@ -177,6 +193,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .map-legend { gap: 8px 9px; }
   .map-legend span { font-size: 8px; }
   .desktop-nav { margin-left: 46px; }
+  .how-it-works { padding: 24px; }
+  .how-steps { gap: 9px; }
+  .how-step { padding: 14px; }
 }
 @media (max-width: 720px) {
   .app-shell { padding: 0 16px; }
@@ -187,6 +206,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .intro { padding: 31px 0 20px; }
   .intro h1 { font-size: 43px; letter-spacing: -2px; }
   .intro-copy p { max-width: 340px; font-size: 12px; }
+  .intro-actions { gap: 13px; margin-top: 15px; }
+  .hero-report-button { padding: 11px 12px; font-size: 11px; }
+  .hero-how-link { font-size: 11px; }
   .intro-note { display: none; }
   .search-panel { gap: 7px; margin-bottom: 14px; }
   .search-field { gap: 8px; height: 44px; padding: 0 11px; }
@@ -201,6 +223,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .map-caption { bottom: 9px; left: 9px; max-width: calc(100% - 18px); font-size: 8px; }
   .results-panel { max-height: none; }
   .place-list { max-height: 280px; overflow-y: auto; }
+  .how-it-works { margin-top: 24px; padding: 20px; }
+  .how-steps { grid-template-columns: 1fr; gap: 9px; margin-top: 17px; }
+  .how-step { min-height: 0; padding: 14px; }
+  .how-step h3 { margin-top: 10px; }
   .page-footer { flex-direction: column; padding: 14px 0 18px; line-height: 1.5; }
 }
 @media (prefers-reduced-motion: reduce) {
