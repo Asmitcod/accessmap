@@ -13,7 +13,7 @@ services:
       - key: ACCESSMAP_PUBLIC_CONTRIBUTIONS_ENABLED
         value: "false"
       - key: ACCESSMAP_CORS_ORIGINS
-        value: https://accessmap-demo.onrender.com
+        value: https://accessmap-demo-38bc.onrender.com
       - key: DATABASE_URL
         sync: false
       - key: DATABASE_USERNAME
