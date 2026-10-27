@@ -53,7 +53,7 @@ If the API is unavailable, the frontend displays a sample-only preview and disab
 
 ## Deploy a shareable demo (Render + Neon)
 
-The checked-in `render.yaml` creates a public static frontend and a Docker-based Spring Boot API. The API uses Neon PostgreSQL with Flyway migrations. Public browsing is enabled, but registration, report submission, and moderation endpoints are disabled on this demo deployment. The frontend hides contribution controls as well; the backend independently enforces the same restriction.
+The checked-in `render.yaml` creates a public static frontend and a Docker-based Spring Boot API. The API uses Neon PostgreSQL with Flyway migrations. Public browsing, account registration, login, and reports are enabled on this shareable prototype; moderator review is restricted to the configured moderator account. The prototype does not yet include email verification or password recovery, so public account and report abuse safeguards are limited.
 
 1. Push this repository to your GitHub account. Create a free PostgreSQL project in Neon and note its host, database name, username, and password. Keep the database credentials private.
 2. In Render, create a **Blueprint** from your GitHub repository and apply the services defined in `render.yaml`. The names `accessmap-api` and `accessmap-demo` determine the URLs used by the configuration; if you rename either service, update the API URL in `render.yaml` and the frontend origin in the API environment variables.
@@ -72,17 +72,20 @@ The checked-in `render.yaml` creates a public static frontend and a Docker-based
 
      Paste the output directly into Render's secret field. Do not commit it or send it in chat.
 
-   The blueprint sets the production profile, CORS origin, health check, and demo-only contribution setting. Do not enable contributions on a public deployment until email verification and stronger abuse safeguards are ready.
-4. Wait for both Render services to finish deploying. Open `https://accessmap-api.onrender.com/actuator/health` and confirm it reports `UP`, then visit `https://accessmap-demo.onrender.com`. The API imports the bundled 245-place dataset into Neon on first start.
-5. Verify the site displays OSM attribution and that sign-in/report controls are absent. Check that `POST /api/auth/register` is rejected by the API (HTTP 401) and that public place browsing still works.
+   - `ACCESSMAP_MODERATOR_EMAIL`: email address for the moderator account
+   - `ACCESSMAP_MODERATOR_PASSWORD`: password for that account (at least 16 characters, at most 72 UTF-8 bytes)
+
+   The blueprint sets the production profile, CORS origin, health check, public contributions, and moderator account credentials. Keep all passwords and generated secrets private. On startup, the API creates the moderator account if it does not exist, or promotes the existing account if its password matches the configured password. Its moderator role is stored in Neon and survives restarts. To configure an existing account, use the same email and password that account already uses.
+4. Wait for both Render services to finish deploying. Open `https://accessmap-api.onrender.com/actuator/health` and confirm it reports `UP`, then visit `https://accessmap-demo-38bc.onrender.com`. The API imports the bundled 245-place dataset into Neon on first start.
+5. Verify the site displays OSM attribution, login/registration work, reports can be submitted, and the configured moderator can review them.
 
 Render's free API instance may sleep while idle, so the first request after a quiet period can be slow; reload the demo once the service wakes. Check current Render and Neon free-tier quotas and retention limits before relying on the deployment. OpenStreetMap's public tile servers have a usage policy and are not a guaranteed production tile service. This deployment is a shareable prototype, not a production community launch.
 
-## Local moderation
+## Moderator account behavior
 
 New community reports are pending until approved by a moderator, and pending or rejected reports do not appear on the public map. Existing reports are treated as approved during the schema upgrade.
 
-To configure the local moderator account, set its email and enter a password of at least 16 characters (at most 72 UTF-8 bytes) in the same PowerShell window before starting the API:
+For local development, set the moderator email and enter a password of at least 16 characters (at most 72 UTF-8 bytes) in the same PowerShell window before starting the API:
 
 ```powershell
 $env:ACCESSMAP_MODERATOR_EMAIL = Read-Host "Moderator email"
@@ -91,7 +94,7 @@ $env:ACCESSMAP_MODERATOR_PASSWORD = ([System.Net.NetworkCredential]::new("", $mo
 mvn spring-boot:run
 ```
 
-The API creates that account on first start. If the email already belongs to an account, its existing password must match the configured password before it is granted moderator access. If both settings are omitted, report submission still works, but reports remain pending and no account can review them. These local environment variables are not saved after the PowerShell window closes.
+The API creates that account on first start. If the email already belongs to an account, its existing password must match the configured password before it is granted moderator access. In Render, set the same values as the `ACCESSMAP_MODERATOR_EMAIL` and `ACCESSMAP_MODERATOR_PASSWORD` environment variables; the moderator role is saved in Neon. If both settings are omitted, reports remain pending and no account can review them. Local environment variables are not saved after the PowerShell window closes.
 
 ## API
 

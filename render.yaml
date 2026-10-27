@@ -11,7 +11,13 @@ services:
       - key: SPRING_PROFILES_ACTIVE
         value: production
       - key: ACCESSMAP_PUBLIC_CONTRIBUTIONS_ENABLED
-        value: "false"
+        value: "true"
+      - key: ACCESSMAP_PUBLIC_AUTH_ENABLED
+        value: "true"
+      - key: ACCESSMAP_MODERATOR_EMAIL
+        sync: false
+      - key: ACCESSMAP_MODERATOR_PASSWORD
+        sync: false
       - key: ACCESSMAP_CORS_ORIGINS
         value: https://accessmap-demo-38bc.onrender.com
       - key: DATABASE_URL
@@ -33,4 +39,6 @@ services:
       - key: VITE_API_BASE
         value: https://accessmap-api.onrender.com/api
       - key: VITE_PUBLIC_CONTRIBUTIONS_ENABLED
-        value: "false"
+        value: "true"
+      - key: VITE_PUBLIC_AUTH_ENABLED
+        value: "true"

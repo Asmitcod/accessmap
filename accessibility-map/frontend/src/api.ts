@@ -1,6 +1,7 @@
 import type { CreateReport, FeatureType, Place, ReportStatus } from './types'
 
 const API_BASE = import.meta.env.VITE_API_BASE || '/api'
+export const publicAuthEnabled = import.meta.env.VITE_PUBLIC_AUTH_ENABLED !== 'false'
 export const publicContributionsEnabled = import.meta.env.VITE_PUBLIC_CONTRIBUTIONS_ENABLED !== 'false'
 
 async function responseErrorMessage(response: Response, fallback: string): Promise<string> {

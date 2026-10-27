@@ -22,6 +22,7 @@ public class SecurityConfig {
     SecurityFilterChain securityFilterChain(
             HttpSecurity http,
             JwtAuthenticationFilter jwtAuthenticationFilter,
+            @Value("${app.public-auth-enabled:true}") boolean publicAuthEnabled,
             @Value("${app.public-contributions-enabled:true}") boolean publicContributionsEnabled) throws Exception {
         http.csrf(csrf -> csrf.disable())
                 .cors(Customizer.withDefaults())
@@ -33,9 +34,13 @@ public class SecurityConfig {
                 .authorizeHttpRequests(requests -> {
                     requests.requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                             .requestMatchers(HttpMethod.GET, "/api/places/**", "/actuator/health").permitAll();
+                    if (publicAuthEnabled) {
+                        requests.requestMatchers(HttpMethod.POST, "/api/auth/register", "/api/auth/login").permitAll();
+                    } else {
+                        requests.requestMatchers(HttpMethod.POST, "/api/auth/register", "/api/auth/login").denyAll();
+                    }
                     if (publicContributionsEnabled) {
-                        requests.requestMatchers(HttpMethod.POST, "/api/auth/register", "/api/auth/login").permitAll()
-                                .requestMatchers(
+                        requests.requestMatchers(
                                         HttpMethod.POST,
                                         "/api/places/*/features",
                                         "/api/places/*/features/*/reports")
@@ -44,8 +49,6 @@ public class SecurityConfig {
                     } else {
                         requests.requestMatchers(
                                         HttpMethod.POST,
-                                        "/api/auth/register",
-                                        "/api/auth/login",
                                         "/api/places/*/features",
                                         "/api/places/*/features/*/reports",
                                         "/api/moderation/**")

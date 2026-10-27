@@ -33,6 +33,7 @@ import {
   getModerationAudit,
   getPendingReports,
   getPlaces,
+  publicAuthEnabled,
   publicContributionsEnabled,
   reviewReport,
 } from './api'
@@ -357,10 +358,10 @@ function App() {
           <a className="nav-link" href="#how-it-works">How it works</a>
         </nav>
         <div className="topbar-actions">
-          {publicContributionsEnabled && authEmail ? (
+          {publicAuthEnabled && authEmail ? (
             <>
               <span className="signed-in-email">{authEmail}</span>
-              {isModerator && (
+              {publicContributionsEnabled && isModerator && (
                 <button className="text-button" type="button" onClick={() => void openModerationQueue()}>
                   Moderation{moderationReports.length ? ` (${moderationReports.length})` : ''}
                 </button>
@@ -380,7 +381,7 @@ function App() {
                 Sign out
               </button>
             </>
-          ) : publicContributionsEnabled ? (
+          ) : publicAuthEnabled ? (
             <>
               <button className="text-button" type="button" onClick={() => {
                 setAuthMode('login')
@@ -408,9 +409,9 @@ function App() {
           <nav className="mobile-nav" aria-label="Mobile navigation">
             <a href="#map" onClick={() => setIsMobileMenuOpen(false)}>Explore map</a>
             <a href="#how-it-works" onClick={() => setIsMobileMenuOpen(false)}>How it works</a>
-            {publicContributionsEnabled && authEmail ? (
+            {publicAuthEnabled && authEmail ? (
               <>
-                {isModerator && (
+                {publicContributionsEnabled && isModerator && (
                   <button type="button" onClick={() => {
                     setIsMobileMenuOpen(false)
                     void openModerationQueue()
@@ -425,7 +426,7 @@ function App() {
                   setIsMobileMenuOpen(false)
                 }}>Sign out ({authEmail})</button>
               </>
-            ) : publicContributionsEnabled ? (
+            ) : publicAuthEnabled ? (
               <>
                 <button type="button" onClick={() => {
                   setAuthMode('login')
@@ -876,7 +877,9 @@ function App() {
               <div>
                 <span className="section-kicker">COMMUNITY ACCOUNT</span>
                 <h2 id="auth-title">{authMode === 'login' ? 'Welcome back' : 'Join the community'}</h2>
-                <p>Sign in to submit accessibility reports.</p>
+                <p>{publicContributionsEnabled
+                  ? 'Sign in to submit accessibility reports.'
+                  : 'Sign in or create an account to explore the demo.'}</p>
               </div>
               <button className="icon-button" type="button" aria-label="Close account form" onClick={() => setIsAuthOpen(false)}><X size={19} /></button>
             </div>
