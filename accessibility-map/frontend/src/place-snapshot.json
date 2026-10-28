@@ -1,0 +1,2455 @@
+{
+  "updatedAt": "2026-10-25T18:57:06Z",
+  "places": [
+    {
+      "id": "way/34404757",
+      "name": "Dr. Ram Manohar Lohia Hospital",
+      "address": "Baba Kharak Singh Marg, Near Bangla Sahib Gurudwara",
+      "category": "hospital",
+      "latitude": 28.6260617,
+      "longitude": 77.2007463,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "way/289405078",
+      "name": "Guru Nanak Eye Hospital",
+      "address": "Minto Road, Mahavir Ranjeet Singh Marg,Delhi Gate",
+      "category": "hospital",
+      "latitude": 28.6383024,
+      "longitude": 77.2322347,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "way/294522137",
+      "name": "Mrs. Girdhar Lal Maternity Hospital",
+      "address": "Jawaharlal Nehru Marg, Ajmeri Gate, Near New Delhi Railway Station",
+      "category": "hospital",
+      "latitude": 28.6433234,
+      "longitude": 77.2245015,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "way/295808332",
+      "name": "British Council Division",
+      "address": "17, Kasturba Gandhi Marg, New Delhi",
+      "category": "library",
+      "latitude": 28.6269475,
+      "longitude": 77.2222384,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "way/351418783",
+      "name": "Patel Chowk",
+      "address": "Delhi, India",
+      "category": "station",
+      "latitude": 28.6233674,
+      "longitude": 77.2144911,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/554257833",
+      "name": "Shivaji Stadium",
+      "address": "Delhi, India",
+      "category": "station",
+      "latitude": 28.6288963,
+      "longitude": 77.2113218,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/554257841",
+      "name": "New Delhi",
+      "address": "Delhi, India",
+      "category": "station",
+      "latitude": 28.6434826,
+      "longitude": 77.2227421,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/928491343",
+      "name": "Delhi Heart and Lung Institute Super Speciality Hospital",
+      "address": "Delhi, India",
+      "category": "hospital",
+      "latitude": 28.6416777,
+      "longitude": 77.2052683,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/928550280",
+      "name": "Hotel Metropolis",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6407045,
+      "longitude": 77.2105994,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/928567979",
+      "name": "Piccadelhi",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.635243,
+      "longitude": 77.2196937,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/938409545",
+      "name": "New Delhi Airport Express Terminal",
+      "address": "Delhi, India",
+      "category": "station",
+      "latitude": 28.6424786,
+      "longitude": 77.2231116,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/1184509690",
+      "name": "Internet",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6410051,
+      "longitude": 77.2125387,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "way/1193078528",
+      "name": "Juggernaut",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6294215,
+      "longitude": 77.2260694,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "way/1233269501",
+      "name": "Warehouse Café",
+      "address": "Inner Circle, Connaught Place, New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6337784,
+      "longitude": 77.2210359,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/1241932078",
+      "name": "Bangla Foods",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6333595,
+      "longitude": 77.2083619,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "way/1251938028",
+      "name": "Third Wave Coffee Roasters",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6342957,
+      "longitude": 77.2201094,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "way/1251938029",
+      "name": "Dr. Zombie",
+      "address": "35, Inner Circle, Connaught Place, New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6343276,
+      "longitude": 77.2202392,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "way/1251938032",
+      "name": "Openhouse Cafe",
+      "address": "37, Inner Circle, Connaught Place, Delhi",
+      "category": "restaurant",
+      "latitude": 28.6342632,
+      "longitude": 77.2204345,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "way/1252056678",
+      "name": "Cafe MRP",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6345944,
+      "longitude": 77.2206395,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "way/1252224959",
+      "name": "Chai 24/7",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6347534,
+      "longitude": 77.2184888,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "way/1306328990",
+      "name": "Third Wave Coffee Roasters",
+      "address": "11",
+      "category": "cafe",
+      "latitude": 28.6326153,
+      "longitude": 77.2215244,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "way/1475265592",
+      "name": "Sagar Ratna",
+      "address": "Janpath, New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6270536,
+      "longitude": 77.2197474,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "way/1493039982",
+      "name": "Blue Tokai Coffee Roasters",
+      "address": "44, New Delhi",
+      "category": "cafe",
+      "latitude": 28.6310249,
+      "longitude": 77.2218734,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "way/1510743786",
+      "name": "Tan Coffee",
+      "address": "35/5;35/6;35/7",
+      "category": "cafe",
+      "latitude": 28.6346461,
+      "longitude": 77.218215,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "way/1552721232",
+      "name": "Chaayos",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6313504,
+      "longitude": 77.2205072,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/1556466158",
+      "name": "Spice Route",
+      "address": "New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6253844,
+      "longitude": 77.2181175,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/1563325267",
+      "name": "Nathus Sweets",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6297269,
+      "longitude": 77.2320267,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/1563325307",
+      "name": "Bengali Sweet House",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.629465,
+      "longitude": 77.2318985,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/1940318525",
+      "name": "Club India Restaurant",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6409319,
+      "longitude": 77.2137081,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/1940318533",
+      "name": "Madan Café",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6407272,
+      "longitude": 77.2111472,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/1940318549",
+      "name": "New Mt. Everest Restaurant",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.641034,
+      "longitude": 77.213836,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/1988513598",
+      "name": "Shivaji Bridge",
+      "address": "Delhi, India",
+      "category": "station",
+      "latitude": 28.6334521,
+      "longitude": 77.2266682,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/2410180166",
+      "name": "Starbucks",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6321974,
+      "longitude": 77.2177075,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/2591114289",
+      "name": "Indian Coffee House",
+      "address": "Baba Kharak Singh Marg, Connaught Place, New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6306895,
+      "longitude": 77.2160507,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/2592537223",
+      "name": "Hira Sweets",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6353527,
+      "longitude": 77.220063,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/2592537225",
+      "name": "Sayam Roof Top Restaurant",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6411417,
+      "longitude": 77.2137445,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/2699335584",
+      "name": "General Library",
+      "address": "Delhi, India",
+      "category": "library",
+      "latitude": 28.6396027,
+      "longitude": 77.209199,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/2709534496",
+      "name": "Keshav Restaurant",
+      "address": "Radial Road 6, New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6337495,
+      "longitude": 77.2230833,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/3242109311",
+      "name": "The Exotic Rooftop Restaurant",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6409844,
+      "longitude": 77.2137687,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/3242109751",
+      "name": "Madras Coffee House",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6318506,
+      "longitude": 77.2163093,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/3250376814",
+      "name": "쉼터",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6414451,
+      "longitude": 77.2132453,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/3269429079",
+      "name": "Tadka",
+      "address": "4986, Ramdwara Road",
+      "category": "restaurant",
+      "latitude": 28.6403009,
+      "longitude": 77.2131013,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/3704734413",
+      "name": "Nando's",
+      "address": "New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6309879,
+      "longitude": 77.2197896,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4069815728",
+      "name": "The Colonnade",
+      "address": "B-23, Inner Circle",
+      "category": "restaurant",
+      "latitude": 28.6342635,
+      "longitude": 77.2190699,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4069858894",
+      "name": "Gola",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6352724,
+      "longitude": 77.220127,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4122592291",
+      "name": "Odeon sweets",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6334275,
+      "longitude": 77.2080471,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4211994391",
+      "name": "Malhotra",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6410445,
+      "longitude": 77.2105515,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4219631340",
+      "name": "Sam's Cafe",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6410923,
+      "longitude": 77.2126799,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4241254891",
+      "name": "Starbucks",
+      "address": "16, New Delhi",
+      "category": "cafe",
+      "latitude": 28.6302915,
+      "longitude": 77.2204826,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4262365091",
+      "name": "Festa Cafe",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6409134,
+      "longitude": 77.2104527,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4336565091",
+      "name": "Kitchen Cafe Roof Top",
+      "address": "Main Bazaar",
+      "category": "cafe",
+      "latitude": 28.6409875,
+      "longitude": 77.2128901,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4336790092",
+      "name": "Café office office",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6269741,
+      "longitude": 77.2202933,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4338105559",
+      "name": "Zaffran",
+      "address": "26/28, Radial Road No.6, New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6337656,
+      "longitude": 77.2213244,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4338129371",
+      "name": "Barbeque Nation",
+      "address": "N-96, 2nd Floor, Munshi Lal Building, Connaught Place, New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6303156,
+      "longitude": 77.2206535,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4341101093",
+      "name": "Nepali Food",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6411171,
+      "longitude": 77.2144269,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4350522692",
+      "name": "Malhotra",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6408661,
+      "longitude": 77.2103053,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4389398989",
+      "name": "Pind Balluchi",
+      "address": "13, Sansad Marg, New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6303463,
+      "longitude": 77.217545,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4391613189",
+      "name": "Rajdhani",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6298048,
+      "longitude": 77.2204846,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4401493065",
+      "name": "Neelam Restaurant",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6420621,
+      "longitude": 77.2179887,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4460479219",
+      "name": "Fa Yian The Chinese Restaurant",
+      "address": "New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6327733,
+      "longitude": 77.2173651,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4565027989",
+      "name": "Wow Cafe",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6412137,
+      "longitude": 77.2147624,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4656714717",
+      "name": "NATRAJ restaurant",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6424044,
+      "longitude": 77.2103819,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4679882984",
+      "name": "Biryani Blues",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6298227,
+      "longitude": 77.2205834,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4711571792",
+      "name": "Embassy Restaurant ( Samosa)",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6336538,
+      "longitude": 77.2211826,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4715157790",
+      "name": "Malabar Hotel",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6423302,
+      "longitude": 77.2182562,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4715157791",
+      "name": "Hotel Madras Dx",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.642273,
+      "longitude": 77.218265,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4715162190",
+      "name": "Hyderabadi Dum Biriyaani",
+      "address": "113, Amir Kaur Market",
+      "category": "restaurant",
+      "latitude": 28.6424057,
+      "longitude": 77.2182489,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4715173889",
+      "name": "South Indian Foods",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6424536,
+      "longitude": 77.2182429,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4752292921",
+      "name": "Everest Bakery Cafe",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6417215,
+      "longitude": 77.2147806,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4772064342",
+      "name": "Safari Restro Lounge",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6319603,
+      "longitude": 77.2078492,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4772753924",
+      "name": "Rishi Vaishno Dhaba",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6405446,
+      "longitude": 77.217099,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4773105444",
+      "name": "Sonu",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6409944,
+      "longitude": 77.2127435,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4783668221",
+      "name": "Kwality",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6299114,
+      "longitude": 77.2172701,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4857522521",
+      "name": "Everest kitchen",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6411046,
+      "longitude": 77.2135151,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4882164023",
+      "name": "Chaayos",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6314625,
+      "longitude": 77.2206262,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4908782321",
+      "name": "Kathmandu Food Cafe",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6418156,
+      "longitude": 77.2126057,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4959734021",
+      "name": "Lazeez Affaire",
+      "address": "12, New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6353146,
+      "longitude": 77.2206088,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4959734022",
+      "name": "Kovil",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6333695,
+      "longitude": 77.2212936,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/4985058921",
+      "name": "Thalee",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6409867,
+      "longitude": 77.2108048,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5017491421",
+      "name": "Pizza Hut",
+      "address": "New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6275145,
+      "longitude": 77.2198691,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5017912424",
+      "name": "Mughlai Junction",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6307517,
+      "longitude": 77.2205444,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5073788621",
+      "name": "saravan bhavan",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6249108,
+      "longitude": 77.2194157,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5109849421",
+      "name": "The Immigrant Cafe",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6341541,
+      "longitude": 77.218784,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5329504729",
+      "name": "Sagar Ratna",
+      "address": "15, New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6353922,
+      "longitude": 77.2203937,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5488627982",
+      "name": "Krishna Cafe",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6411123,
+      "longitude": 77.2136081,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5521617170",
+      "name": "Barbeque Nation",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6309182,
+      "longitude": 77.2169211,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5634524438",
+      "name": "Pind Balluchi",
+      "address": "New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6291804,
+      "longitude": 77.219755,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5647754113",
+      "name": "Chili's",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6315666,
+      "longitude": 77.2223238,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5647754300",
+      "name": "Chaayos",
+      "address": "66, New Delhi",
+      "category": "cafe",
+      "latitude": 28.6315876,
+      "longitude": 77.2222789,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5647754302",
+      "name": "Chelvies Coffee Company",
+      "address": "6",
+      "category": "cafe",
+      "latitude": 28.6316939,
+      "longitude": 77.2221888,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5656397310",
+      "name": "Rodeo",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.633169,
+      "longitude": 77.2179864,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5709171322",
+      "name": "The Chai Story",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6345227,
+      "longitude": 77.218088,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5784310847",
+      "name": "Apollo Pharmacy",
+      "address": "8, New Delhi",
+      "category": "pharmacy",
+      "latitude": 28.6337914,
+      "longitude": 77.217038,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5784310848",
+      "name": "Si Nonna's",
+      "address": "4;5;6",
+      "category": "restaurant",
+      "latitude": 28.6339281,
+      "longitude": 77.217254,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5784312104",
+      "name": "Xero Degrees",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6337234,
+      "longitude": 77.216992,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5784312301",
+      "name": "Medicine House",
+      "address": "04, D00, New Delhi",
+      "category": "pharmacy",
+      "latitude": 28.6338871,
+      "longitude": 77.2173285,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5784312302",
+      "name": "Nath Brothers",
+      "address": "Delhi, India",
+      "category": "pharmacy",
+      "latitude": 28.6338668,
+      "longitude": 77.2173585,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/5810594585",
+      "name": "Chai Point",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6340726,
+      "longitude": 77.2179671,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6047921386",
+      "name": "Diamond restaurant",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6410202,
+      "longitude": 77.2126034,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6073119985",
+      "name": "The Junkyard Cafe",
+      "address": "Outer Circle",
+      "category": "cafe",
+      "latitude": 28.6303838,
+      "longitude": 77.2207212,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6094909115",
+      "name": "Grand Singh restaurant",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6407001,
+      "longitude": 77.211572,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6131069513",
+      "name": "New Delhi",
+      "address": "Delhi, India",
+      "category": "station",
+      "latitude": 28.6419258,
+      "longitude": 77.2217499,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6161686838",
+      "name": "Mother India",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6353515,
+      "longitude": 77.2190315,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6161689896",
+      "name": "United Coffee House",
+      "address": "15",
+      "category": "restaurant",
+      "latitude": 28.6323784,
+      "longitude": 77.2213733,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6161690529",
+      "name": "Véda",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6350577,
+      "longitude": 77.2181263,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6161690587",
+      "name": "Wagh Bakri Tea Lounge",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6343528,
+      "longitude": 77.2220221,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6161690588",
+      "name": "Roma by Unplugged Courtyard",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6344013,
+      "longitude": 77.2214575,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6161987878",
+      "name": "Hard Rock Cafe",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6291307,
+      "longitude": 77.2197582,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6161987883",
+      "name": "Local",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6298758,
+      "longitude": 77.2210617,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6187928085",
+      "name": "Mittal Teas",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6299698,
+      "longitude": 77.2229648,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6203987736",
+      "name": "Cafe Coffee Day",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6330613,
+      "longitude": 77.2198505,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6224257207",
+      "name": "Triveni Terrace Cafe",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.627319,
+      "longitude": 77.2326929,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6278067985",
+      "name": "Rajasthali",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6347294,
+      "longitude": 77.2203803,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6278106187",
+      "name": "Hotmess",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6325274,
+      "longitude": 77.2223125,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6495330860",
+      "name": "Cafe Coffee Day",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6343368,
+      "longitude": 77.2194568,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6495330876",
+      "name": "Zen",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6342714,
+      "longitude": 77.2192315,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6495346838",
+      "name": "The Big Chill",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6343244,
+      "longitude": 77.2191621,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6539894850",
+      "name": "Ramakrishna Ashram Marg",
+      "address": "Delhi, India",
+      "category": "station",
+      "latitude": 28.6392436,
+      "longitude": 77.2085787,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6539894851",
+      "name": "Rajiv Chowk",
+      "address": "Delhi, India",
+      "category": "station",
+      "latitude": 28.6327062,
+      "longitude": 77.2193123,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6539894855",
+      "name": "Barakhambha Road",
+      "address": "Delhi, India",
+      "category": "station",
+      "latitude": 28.6297676,
+      "longitude": 77.2250046,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6539894856",
+      "name": "Mandi House",
+      "address": "Delhi, India",
+      "category": "station",
+      "latitude": 28.6256122,
+      "longitude": 77.2341966,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6566966468",
+      "name": "OTB Café",
+      "address": "B-49, Connaught Circus (Indira Chowk), Connaught Place, New Delhi",
+      "category": "cafe",
+      "latitude": 28.6343601,
+      "longitude": 77.2182711,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6657141286",
+      "name": "Bistrot 55",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6409128,
+      "longitude": 77.2136434,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6676143713",
+      "name": "The Art House Cafe",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6305595,
+      "longitude": 77.2212797,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6707994776",
+      "name": "Shake Square",
+      "address": "42/2, Middle Circle",
+      "category": "restaurant",
+      "latitude": 28.634703,
+      "longitude": 77.2205246,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6734411085",
+      "name": "Open Hand Cafe (top top ;)",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6405754,
+      "longitude": 77.2117485,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6792923897",
+      "name": "Sorento",
+      "address": "19, Ashoka Road, New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6209452,
+      "longitude": 77.2180853,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/6814370613",
+      "name": "DePaul's",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6288925,
+      "longitude": 77.2186728,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/7018886726",
+      "name": "Patel Chowk",
+      "address": "Delhi, India",
+      "category": "station",
+      "latitude": 28.6229664,
+      "longitude": 77.214031,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/7041400209",
+      "name": "Sandoz",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6344467,
+      "longitude": 77.2220056,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/7044903485",
+      "name": "Minar",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6345679,
+      "longitude": 77.2219125,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/7083796923",
+      "name": "Caffè Tonino",
+      "address": "9",
+      "category": "restaurant",
+      "latitude": 28.6350184,
+      "longitude": 77.2195254,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/7083916145",
+      "name": "Hashery",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6342664,
+      "longitude": 77.2180918,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/7110019814",
+      "name": "National Restaurant",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6345219,
+      "longitude": 77.2225088,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/7138493129",
+      "name": "President Estate Clinic",
+      "address": "No. 27, North Avenue Area, Near R M L Hospital",
+      "category": "clinic",
+      "latitude": 28.6208562,
+      "longitude": 77.2004083,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/7138493163",
+      "name": "New Delhi Municipal Council Polyclinic",
+      "address": "Shaheed Bhagat Singh Marg, DIZ Area, Connaught Place",
+      "category": "clinic",
+      "latitude": 28.633024,
+      "longitude": 77.2111811,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/7138493190",
+      "name": "Babar Road Allopathic Dispensary",
+      "address": "42, Ground Floor, Babar Road, Dispensary Complex",
+      "category": "clinic",
+      "latitude": 28.6295482,
+      "longitude": 77.234083,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/7138493193",
+      "name": "Kalawati Saran Children's Hospital",
+      "address": "C- 604, Connaught Circus, DIZ Area, Connaught Place, New Delhi",
+      "category": "hospital",
+      "latitude": 28.6357652,
+      "longitude": 77.2110664,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/7138493247",
+      "name": "H.C.M. Lane Allopathic Dispensary",
+      "address": "18-A, Telegraph Lane, Near Bhartiya Vidya Bhawan, Janpath , Diwanchand Imangning Centre",
+      "category": "clinic",
+      "latitude": 28.6227119,
+      "longitude": 77.2227032,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/7138493252",
+      "name": "CGHS Wellness Centre Kali Bari",
+      "address": "DIZ Area, Udyan marg, Kalibari Marg, Near Birla Mandir",
+      "category": "clinic",
+      "latitude": 28.6288565,
+      "longitude": 77.2001398,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/7138493258",
+      "name": "Central Hospital (Northern Railways)",
+      "address": "Basant Lane, Paharganj, Connaught Place",
+      "category": "hospital",
+      "latitude": 28.6365867,
+      "longitude": 77.2173905,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/7138534287",
+      "name": "Lady Hardinge Medical College & Associated Hospitals",
+      "address": "C-604, Shaheed Bhagat Singh Road, Diz Area, Connaught Place, New Delhi",
+      "category": "hospital",
+      "latitude": 28.634138,
+      "longitude": 77.212909,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/7138534362",
+      "name": "ESI Dispensary, Chuna Mandi Paharganj",
+      "address": "ESI Dispensary Chuna Mandi, gali No.-10, Pahargaj, New Delhi",
+      "category": "clinic",
+      "latitude": 28.6427947,
+      "longitude": 77.2098113,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/7138534396",
+      "name": "CGHS Dispensary, C.G. Road",
+      "address": "Aram Bagh, Behind Paharganj Police station, Pahargaj",
+      "category": "clinic",
+      "latitude": 28.642259,
+      "longitude": 77.2084424,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/7222985985",
+      "name": "Singh’s café & restaurant",
+      "address": "1176 Main Bazar",
+      "category": "restaurant",
+      "latitude": 28.6411587,
+      "longitude": 77.2134007,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/8018558072",
+      "name": "Rajiv Chowk",
+      "address": "Delhi, India",
+      "category": "station",
+      "latitude": 28.6327786,
+      "longitude": 77.2196985,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/8044305077",
+      "name": "Travel Yoga Cafe",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6357531,
+      "longitude": 77.2205669,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/8151189839",
+      "name": "Parikrama - The Revolving Restaurant",
+      "address": "Antriksh Bhavan, 22, KG Marg, Barakhamba, New Delhi, Delhi",
+      "category": "restaurant",
+      "latitude": 28.6287272,
+      "longitude": 77.2229395,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/8151246340",
+      "name": "Arvind Medicare",
+      "address": "L-43, Connaught Cir, Hanuman Road Area, Connaught Place, New Delhi, Delhi",
+      "category": "hospital",
+      "latitude": 28.6311711,
+      "longitude": 77.2170294,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/8151246349",
+      "name": "General Williams Hospital",
+      "address": "40, Tolstoy Rd, Atul Grove Road, Janpath, Connaught Place, New Delhi, Delhi",
+      "category": "hospital",
+      "latitude": 28.6267808,
+      "longitude": 77.2182706,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/8982336371",
+      "name": "Cafe Coffee Day",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6267988,
+      "longitude": 77.2197099,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/9037075910",
+      "name": "Nik Baker's",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6304553,
+      "longitude": 77.2198235,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/9239861666",
+      "name": "Barbeque Nation",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6303516,
+      "longitude": 77.2207134,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/9239861671",
+      "name": "Blues",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6303321,
+      "longitude": 77.2206386,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/9239861673",
+      "name": "Castle's Barbeque",
+      "address": "Outer Circle",
+      "category": "restaurant",
+      "latitude": 28.6303565,
+      "longitude": 77.22068,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/9239861674",
+      "name": "Taste of China",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6303371,
+      "longitude": 77.2206681,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/9239861686",
+      "name": "Ardor 2.1",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6302128,
+      "longitude": 77.2201334,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/9279741263",
+      "name": "DS Dosa Factory",
+      "address": "N-19, Outer Circle, New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6303457,
+      "longitude": 77.2208085,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/9584236507",
+      "name": "Janpath",
+      "address": "Delhi, India",
+      "category": "station",
+      "latitude": 28.6240485,
+      "longitude": 77.2192587,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/9920295123",
+      "name": "Mandi House",
+      "address": "Delhi, India",
+      "category": "station",
+      "latitude": 28.6255149,
+      "longitude": 77.2341926,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/9952989417",
+      "name": "Cafe Coffee Day",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6339517,
+      "longitude": 77.2185,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/10129613417",
+      "name": "New Madras Restraunt (NMR)",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.644045,
+      "longitude": 77.2093712,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/10570234009",
+      "name": "San Gimignano",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6254773,
+      "longitude": 77.2184377,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/10579381741",
+      "name": "Chido",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6323178,
+      "longitude": 77.2226309,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/10773291097",
+      "name": "Dāsaprakāsh",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6346754,
+      "longitude": 77.2177385,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/10905351895",
+      "name": "Harlequin",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6346142,
+      "longitude": 77.2195263,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/10910516588",
+      "name": "Andhra Canteen",
+      "address": "M-58/59, Middle Circle, Connaught Place, New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6336017,
+      "longitude": 77.2221648,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/10924124873",
+      "name": "Mount Fuji",
+      "address": "41/2, New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6330893,
+      "longitude": 77.2221821,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/10936327541",
+      "name": "Ghoomar",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6349675,
+      "longitude": 77.2201154,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/10945664767",
+      "name": "Guru Harkrishan Polyclinic Bangla Sahib",
+      "address": "Delhi, India",
+      "category": "hospital",
+      "latitude": 28.6267693,
+      "longitude": 77.2092035,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11064409807",
+      "name": "Dhaba",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6342698,
+      "longitude": 77.2189583,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11225066964",
+      "name": "OTB Courtyard",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6339638,
+      "longitude": 77.2184611,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11242857871",
+      "name": "Nazeer Foods",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6429888,
+      "longitude": 77.2214491,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11242857873",
+      "name": "IRCTC Food Plaza",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6430383,
+      "longitude": 77.2214437,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11242865005",
+      "name": "Jan-Aahar",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.642164,
+      "longitude": 77.2215364,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11252471885",
+      "name": "Diggin",
+      "address": "12, Connaught Place, New Delhi",
+      "category": "restaurant",
+      "latitude": 28.6331447,
+      "longitude": 77.2179838,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11397955923",
+      "name": "Berco's",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6321001,
+      "longitude": 77.2213271,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11397955924",
+      "name": "QBA",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6321251,
+      "longitude": 77.2212883,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11449298391",
+      "name": "Bheemeshwara",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6315814,
+      "longitude": 77.2162712,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11449298392",
+      "name": "Bikkgane Biryani",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6315312,
+      "longitude": 77.2161571,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11496980431",
+      "name": "Barista",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.632997,
+      "longitude": 77.2190193,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11601991069",
+      "name": "Swagat",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6410098,
+      "longitude": 77.2104547,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11637362094",
+      "name": "The Art of Dumpling",
+      "address": "19, Outer Circle",
+      "category": "restaurant",
+      "latitude": 28.6332625,
+      "longitude": 77.2166944,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11764334602",
+      "name": "Naivedyam",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6324882,
+      "longitude": 77.2161512,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11795527561",
+      "name": "Gokulam",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6289157,
+      "longitude": 77.2197583,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11795614249",
+      "name": "Punjab Grill",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6284596,
+      "longitude": 77.2197378,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11799184120",
+      "name": "Xero Degrees",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6328906,
+      "longitude": 77.2227228,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11801338398",
+      "name": "Bikanervala",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6391042,
+      "longitude": 77.2084744,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11805134682",
+      "name": "Fat Tiger",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.639207,
+      "longitude": 77.2083127,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11816338569",
+      "name": "Tirupati Bhawan",
+      "address": "Connaught Lane",
+      "category": "cafe",
+      "latitude": 28.6333581,
+      "longitude": 77.2226201,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11868892366",
+      "name": "Foodiez",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6296858,
+      "longitude": 77.2260475,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11869013790",
+      "name": "Foodieez",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6289688,
+      "longitude": 77.2247681,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11936527684",
+      "name": "Palika Library",
+      "address": "Delhi, India",
+      "category": "library",
+      "latitude": 28.6295291,
+      "longitude": 77.2337334,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11937020351",
+      "name": "Himachal Bhawan Dining Hall",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6260814,
+      "longitude": 77.2330264,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11971465774",
+      "name": "Del Bite",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6440611,
+      "longitude": 77.2014836,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11982517643",
+      "name": "The House Of Commons",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6329669,
+      "longitude": 77.2226585,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11982519975",
+      "name": "The G.T. Road",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6329741,
+      "longitude": 77.2226609,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/11982519987",
+      "name": "The Imperial Spice",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6330344,
+      "longitude": 77.2226693,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12052451552",
+      "name": "Banwari Lal Charitable Trust Diagnostic Centre",
+      "address": "Delhi, India",
+      "category": "hospital",
+      "latitude": 28.6420044,
+      "longitude": 77.2042941,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12052465818",
+      "name": "Vinod Medicos",
+      "address": "Delhi, India",
+      "category": "pharmacy",
+      "latitude": 28.6377937,
+      "longitude": 77.2114515,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12052474063",
+      "name": "Apollo Pharmacy",
+      "address": "Delhi, India",
+      "category": "pharmacy",
+      "latitude": 28.6337258,
+      "longitude": 77.2085135,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12054358703",
+      "name": "Flavours Of China",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6344804,
+      "longitude": 77.2175301,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12054396927",
+      "name": "Information And Reservation Centre",
+      "address": "Delhi, India",
+      "category": "internet cafe",
+      "latitude": 28.6382012,
+      "longitude": 77.2107644,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12422394301",
+      "name": "Tirumala",
+      "address": "Block N 33/8, Middle Circle",
+      "category": "restaurant",
+      "latitude": 28.6307181,
+      "longitude": 77.2204376,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12839647640",
+      "name": "Ayush Polyclinic",
+      "address": "Delhi, India",
+      "category": "clinic",
+      "latitude": 28.6399323,
+      "longitude": 77.2040074,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12839647656",
+      "name": "Palika Pustakalaya",
+      "address": "Delhi, India",
+      "category": "library",
+      "latitude": 28.6402059,
+      "longitude": 77.2043407,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12896513992",
+      "name": "Gulshan Da Dhaba",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6324913,
+      "longitude": 77.2067022,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12896513993",
+      "name": "R. K. Health Care",
+      "address": "Delhi, India",
+      "category": "pharmacy",
+      "latitude": 28.6324933,
+      "longitude": 77.2067303,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12896534719",
+      "name": "Flavours of Chaap",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6326424,
+      "longitude": 77.2066112,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12896559854",
+      "name": "Kaleva All day Diner Family Restaurant",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6330218,
+      "longitude": 77.2084316,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12896611359",
+      "name": "Apollo Diagnostica Bones & Joints Clinic",
+      "address": "Delhi, India",
+      "category": "clinic",
+      "latitude": 28.6325356,
+      "longitude": 77.207086,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12896614406",
+      "name": "Dayal Da Dhaba",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6324936,
+      "longitude": 77.2066109,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12896628035",
+      "name": "Medsurg Pharma",
+      "address": "Delhi, India",
+      "category": "pharmacy",
+      "latitude": 28.6328049,
+      "longitude": 77.2072974,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12898800881",
+      "name": "Delhi Public Library",
+      "address": "Delhi, India",
+      "category": "library",
+      "latitude": 28.6351463,
+      "longitude": 77.2039828,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12977503231",
+      "name": "The Host",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6316962,
+      "longitude": 77.2209454,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/12977565249",
+      "name": "Gupta Foods",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6307787,
+      "longitude": 77.2207013,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13008734918",
+      "name": "iHub",
+      "address": "Delhi, India",
+      "category": "library",
+      "latitude": 28.6289031,
+      "longitude": 77.2224657,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13124486537",
+      "name": "Fire & Ice",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6410473,
+      "longitude": 77.214,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13322042901",
+      "name": "Satguru Dhaba",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.642225,
+      "longitude": 77.2143627,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13322043001",
+      "name": "Nothing Before Coffee",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6340185,
+      "longitude": 77.21805,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13335517602",
+      "name": "Karan South Indian",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6422224,
+      "longitude": 77.2182015,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13363652702",
+      "name": "The Mandi Chowk",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6315592,
+      "longitude": 77.2162083,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13387065425",
+      "name": "Moti Mahal",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.635255,
+      "longitude": 77.2208232,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13387065426",
+      "name": "Indus Flavour",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6353,
+      "longitude": 77.2207415,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13387065427",
+      "name": "Massala Singh",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6353706,
+      "longitude": 77.2204849,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13447585295",
+      "name": "Mocha",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6318635,
+      "longitude": 77.222533,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13447601864",
+      "name": "Ganpati Chole Bhature",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6328646,
+      "longitude": 77.2231355,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13447613995",
+      "name": "Noon Al Laitoon",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6329635,
+      "longitude": 77.2233895,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13447614053",
+      "name": "Darshini Cafe",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6326908,
+      "longitude": 77.2225729,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13447987229",
+      "name": "Social",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6345627,
+      "longitude": 77.218982,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13447987230",
+      "name": "Yeti",
+      "address": "41",
+      "category": "restaurant",
+      "latitude": 28.6342818,
+      "longitude": 77.2190172,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13447987233",
+      "name": "Po",
+      "address": "41",
+      "category": "restaurant",
+      "latitude": 28.6342575,
+      "longitude": 77.2190255,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13462006001",
+      "name": "Kalsang",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6335284,
+      "longitude": 77.222573,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13534261384",
+      "name": "Cafe Coffee Day",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6309429,
+      "longitude": 77.2169602,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13564519135",
+      "name": "Karigari",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6298677,
+      "longitude": 77.2208292,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13640908050",
+      "name": "Zero Degrees",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6326875,
+      "longitude": 77.2196631,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13692030101",
+      "name": "Sudh shakari dhaba",
+      "address": "e7, Tagore Road",
+      "category": "restaurant",
+      "latitude": 28.6416057,
+      "longitude": 77.2245951,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13705276520",
+      "name": "Metro City Pharmacy",
+      "address": "7, New Delhi",
+      "category": "pharmacy",
+      "latitude": 28.6338607,
+      "longitude": 77.2170799,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13721755512",
+      "name": "Xero Degrees",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.625251,
+      "longitude": 77.2343446,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13834324596",
+      "name": "Blue Tokai",
+      "address": "Delhi, India",
+      "category": "cafe",
+      "latitude": 28.6343714,
+      "longitude": 77.2174692,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/13927682258",
+      "name": "TGI Fridays",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6319736,
+      "longitude": 77.2225505,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/14078144348",
+      "name": "Xero Degrees",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6344287,
+      "longitude": 77.221415,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/14081722436",
+      "name": "Hello Dada",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6326381,
+      "longitude": 77.2173662,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/14082118656",
+      "name": "Adyar Ananda Bhavan",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6271809,
+      "longitude": 77.219818,
+      "demoData": false,
+      "features": []
+    },
+    {
+      "id": "node/14082118657",
+      "name": "Bikanervala",
+      "address": "Delhi, India",
+      "category": "restaurant",
+      "latitude": 28.6275849,
+      "longitude": 77.2198223,
+      "demoData": false,
+      "features": []
+    }
+  ]
+}

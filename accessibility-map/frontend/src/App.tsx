@@ -38,8 +38,11 @@ import {
   reviewReport,
 } from './api'
 import type { ModerationAuditEntry, ModerationReport } from './api'
-import { demoPlaces } from './demo-data'
+import placeSnapshotData from './place-snapshot.json'
 import type { FeatureSummary, FeatureType, Place, ReportStatus } from './types'
+
+const placeSnapshot: Place[] = placeSnapshotData.places
+const placeSnapshotDate = placeSnapshotData.updatedAt.slice(0, 10)
 
 const featureLabels: Record<FeatureType, string> = {
   ENTRANCE: 'Entrance',
@@ -116,8 +119,8 @@ function MapCenter({ place }: { place: Place }) {
 }
 
 function App() {
-  const [places, setPlaces] = useState<Place[]>([])
-  const [selectedId, setSelectedId] = useState('')
+  const [places, setPlaces] = useState<Place[]>(placeSnapshot)
+  const [selectedId, setSelectedId] = useState(placeSnapshot[0]?.id ?? '')
   const [search, setSearch] = useState('')
   const [activeFilter, setActiveFilter] = useState<'ALL' | FeatureType>('ALL')
   const [freshnessFilter, setFreshnessFilter] = useState<'ANY' | '7' | '30' | '90'>('ANY')
@@ -131,7 +134,8 @@ function App() {
   const [reportNote, setReportNote] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [loadError, setLoadError] = useState('')
-  const [isOfflinePreview, setIsOfflinePreview] = useState(false)
+  const [isOfflinePreview, setIsOfflinePreview] = useState(true)
+  const [isLoadingPlaces, setIsLoadingPlaces] = useState(true)
   const [successMessage, setSuccessMessage] = useState('')
   const [authToken, setAuthToken] = useState('')
   const [authEmail, setAuthEmail] = useState('')
@@ -159,14 +163,15 @@ function App() {
         setPlaces(result)
         setSelectedId(result[0]?.id ?? '')
         setIsOfflinePreview(false)
+        setIsLoadingPlaces(false)
+        setLoadError('')
       })
       .catch((error: unknown) => {
         if (cancelled) return
-        setPlaces(demoPlaces)
-        setSelectedId(demoPlaces[0].id)
         setIsOfflinePreview(true)
+        setIsLoadingPlaces(false)
         const message = error instanceof Error ? error.message : 'Could not reach the service.'
-        setLoadError(`${message} Showing illustrative sample data; reporting is unavailable until the API connects.`)
+        setLoadError(`${message} Showing the bundled OpenStreetMap location snapshot; live community reports and reporting are unavailable until the API connects.`)
       })
     return () => {
       cancelled = true
@@ -237,6 +242,16 @@ function App() {
       return
     }
     openReportForm(null)
+  }
+
+  function selectPlaceAndRevealReport(placeId: string) {
+    setSelectedId(placeId)
+    window.requestAnimationFrame(() => {
+      const reportButton = document.getElementById('add-place-button')
+      if (!reportButton) return
+      reportButton.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      reportButton.focus({ preventScroll: true })
+    })
   }
 
   function changeReportType(type: FeatureType) {
@@ -536,6 +551,16 @@ function App() {
           <button type="button" aria-label="Dismiss message" onClick={() => setLoadError('')}><X size={16} /></button>
         </div>
       )}
+      {isOfflinePreview && (
+        <div className="notice preview-notice" role="status">
+          <Clock3 size={17} />
+          <span>
+            {isLoadingPlaces
+              ? `Showing the OpenStreetMap location snapshot from ${placeSnapshotDate} while live reports load.`
+              : `Live data is unavailable. Showing the OpenStreetMap location snapshot from ${placeSnapshotDate}; it does not include the latest community updates or verified accessibility information.`}
+          </span>
+        </div>
+      )}
       {successMessage && (
         <div className="notice success-notice" role="status">
           <Check size={17} /><span>{successMessage}</span>
@@ -575,8 +600,9 @@ function App() {
                   className={`place-card ${place.id === selectedPlace?.id ? 'selected' : ''}`}
                   key={place.id}
                   type="button"
-                  onClick={() => setSelectedId(place.id)}
+                  onClick={() => selectPlaceAndRevealReport(place.id)}
                   aria-pressed={place.id === selectedPlace?.id}
+                  aria-label={`Select ${place.name} and go to accessibility reporting`}
                 >
                   <span className={`place-dot ${tone}`} aria-hidden="true" />
                   <span className="place-card-copy">
@@ -649,6 +675,7 @@ function App() {
               </div>
               <button
                 className="add-place-button"
+                id="add-place-button"
                 type="button"
                 disabled={isOfflinePreview || !publicContributionsEnabled}
                 title={publicContributionsEnabled ? undefined : 'Reporting is disabled in this public demo.'}

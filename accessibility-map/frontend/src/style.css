@@ -73,6 +73,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .filter-menu-option:hover, .filter-menu-option.selected { color: #286b54; background: #edf5f0; }
 .notice { display: flex; align-items: center; gap: 9px; margin: 0 0 14px; border-radius: 8px; padding: 10px 13px; font-size: 12px; line-height: 1.5; }
 .notice button { display: grid; flex: 0 0 auto; place-items: center; margin-left: auto; border: 0; background: transparent; cursor: pointer; }
+.preview-notice { color: #66551f; background: #fff8df; }
 .error-notice { color: #7d453b; background: #fff1eb; }
 .success-notice { color: #286751; background: #eaf5ee; }
 .workspace { display: grid; grid-template-columns: minmax(310px, 390px) minmax(0, 1fr); gap: 16px; height: min(690px, calc(100vh - 355px)); min-height: 540px; }

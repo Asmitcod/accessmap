@@ -11,6 +11,7 @@
 - [OpenStreetMap copyright and attribution](https://www.openstreetmap.org/copyright)
 
 The API is hosted on Render and uses PostgreSQL hosted by Neon. The free API service may sleep when idle, so the first request can take longer while it wakes.
+The map displays a bundled OpenStreetMap location snapshot immediately while the API connects; the snapshot does not contain live community reports or verified accessibility information. Live places and reports replace it when the API responds. For reliably fast live data on a first visit, the API needs an always-on host.
 
 ## What you can do
 
